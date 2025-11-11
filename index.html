@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PetPals Haven - A community platform for passionate pet lovers to share stories, guides, and resources">
+    <title>PetPals Haven - Where Pet Lovers Unite</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/mobile-app.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <span>PetPals Haven</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="pages/blog.html" class="nav-link">Guides</a></li>
+                    <li><a href="pages/stories.html" class="nav-link">Stories</a></li>
+                    <li><a href="pages/resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="pages/about.html" class="nav-link">About</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="floating-icon" style="left: 10%; top: 20%; animation-delay: 0s;">
+                <i class="fas fa-dog"></i>
+            </div>
+            <div class="floating-icon" style="left: 85%; top: 15%; animation-delay: 1s;">
+                <i class="fas fa-cat"></i>
+            </div>
+            <div class="floating-icon" style="left: 15%; top: 70%; animation-delay: 2s;">
+                <i class="fas fa-fish"></i>
+            </div>
+            <div class="floating-icon" style="left: 80%; top: 75%; animation-delay: 1.5s;">
+                <i class="fas fa-dove"></i>
+            </div>
+            <div class="floating-icon" style="left: 50%; top: 30%; animation-delay: 0.5s;">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="floating-icon" style="left: 25%; top: 45%; animation-delay: 2.5s;">
+                <i class="fas fa-bone"></i>
+            </div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Where Pet Lovers Unite</h1>
+                <p class="hero-subtitle">Join our community of passionate pet owners sharing love, stories, and expert care guides</p>
+                
+                <div class="hero-cta">
+                    <a href="pages/blog.html" class="btn btn-primary">
+                        <i class="fas fa-book-open"></i>
+                        Explore Guides
+                    </a>
+                    <a href="pages/stories.html" class="btn btn-secondary">
+                        <i class="fas fa-heart"></i>
+                        Share Your Story
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="15000">0</span>
+                            <span class="stat-label">Community Members</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-book"></i>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="250">0</span>
+                            <span class="stat-label">Expert Guides</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-comments"></i>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="8500">0</span>
+                            <span class="stat-label">Stories Shared</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles Section -->
+    <section class="featured-articles section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Guides</h2>
+                <p class="section-subtitle">Expert advice to help you care for your beloved companions</p>
+            </div>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop" alt="Cute puppy">
+                        <span class="article-category">Dogs</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Puppy 101: Complete Guide to Raising a Happy Puppy</h3>
+                        <p class="article-excerpt">Everything you need to know about house training, socialization, and basic commands for your new furry friend.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                            <a href="pages/guides/puppy-101-guide.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop" alt="Cat relaxing">
+                        <span class="article-category">Cats</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Cat Behavior Decoded: Understanding Your Feline</h3>
+                        <p class="article-excerpt">Learn to read your cat's body language and understand their unique behaviors for a stronger bond.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 6 min read</span>
+                            <a href="pages/guides/cat-behavior-decoded.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop" alt="Senior pet care">
+                        <span class="article-category">Health</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Senior Pet Care: Golden Years Guide</h3>
+                        <p class="article-excerpt">Comprehensive care for aging pets to ensure their comfort and health in their golden years.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
+                            <a href="pages/guides/senior-pet-care.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="section-cta">
+                <a href="pages/blog.html" class="btn btn-outline">View All Guides <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stories Preview -->
+    <section class="community-stories section" id="stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Heartwarming Stories</h2>
+                <p class="section-subtitle">Real experiences from our amazing pet parent community</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="story-author">
+                            <h4>Sarah Johnson</h4>
+                            <span class="pet-type"><i class="fas fa-dog"></i> Golden Retriever</span>
+                        </div>
+                    </div>
+                    <p class="story-content">"Adopting Max changed my life completely. He came from a rescue shelter, scared and unsure. Now, he's the most loving companion I could ask for. Every morning starts with his happy face..."</p>
+                    <a href="pages/stories.html#sarah-story" class="story-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="story-author">
+                            <h4>Michael Chen</h4>
+                            <span class="pet-type"><i class="fas fa-cat"></i> Tabby Cat</span>
+                        </div>
+                    </div>
+                    <p class="story-content">"Luna was a stray who chose us. She showed up on our porch during a rainstorm and never left. Teaching her to trust again was challenging but incredibly rewarding..."</p>
+                    <a href="pages/stories.html#michael-story" class="story-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="story-author">
+                            <h4>Emily Rodriguez</h4>
+                            <span class="pet-type"><i class="fas fa-dove"></i> Cockatiel</span>
+                        </div>
+                    </div>
+                    <p class="story-content">"Kiwi may be small, but he has the biggest personality! His morning songs wake up the whole house, and his tricks never fail to make visitors smile. Birds are incredible companions..."</p>
+                    <a href="pages/stories.html#emily-story" class="story-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="pages/stories.html" class="btn btn-primary">Read More Stories <i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected with PetPals</h2>
+                    <p>Get weekly pet care tips, heartwarming stories, and exclusive guides delivered to your inbox</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                    <button type="submit" class="btn btn-primary">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-paw"></i>
+                        <span>PetPals Haven</span>
+                    </div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together. Because every pet deserves the best care and unconditional love.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/blog.html">Pet Care Guides</a></li>
+                        <li><a href="pages/stories.html">Community Stories</a></li>
+                        <li><a href="pages/resources.html">Resources</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="pages/blog.html?filter=cats">Cats</a></li>
+                        <li><a href="pages/blog.html?filter=birds">Birds</a></li>
+                        <li><a href="pages/blog.html?filter=small-pets">Small Pets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetPals Haven. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="pages/blog.html" class="nav-item">
+            <i class="fas fa-book"></i>
+            <span>Guides</span>
+        </a>
+        <a href="pages/stories.html" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Stories</span>
+        </a>
+        <a href="pages/about.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/mobile-nav.js"></script>
+    <script src="scripts/carousels.js"></script>
+</body>
+</html>

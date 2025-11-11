@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Behavior Decoded: Understanding Your Feline - PetPals Haven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles/themes.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/animations.css">
+    <link rel="stylesheet" href="../../styles/mobile-app.css">
+    <style>
+        .guide-hero { position: relative; height: 60vh; min-height: 400px; background: linear-gradient(135deg, rgba(255, 193, 7, 0.85), rgba(255, 152, 0, 0.8)), url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1600&h=900&fit=crop') center/cover; display: flex; align-items: center; color: white; margin-top: 70px; }
+        .guide-hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; text-align: center; padding: 2rem; }
+        .guide-hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .guide-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+        .guide-meta-item { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px); }
+        .guide-content { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .guide-sidebar { position: sticky; top: 100px; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); }
+        .guide-layout { display: grid; grid-template-columns: 250px 1fr; gap: 3rem; max-width: 1400px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.8rem; }
+        .toc-list a { color: var(--text-secondary); text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem; border-radius: 8px; }
+        .toc-list a:hover, .toc-list a.active { color: var(--color-brand); background: var(--bg-secondary); }
+        .guide-section { margin-bottom: 3rem; scroll-margin-top: 100px; }
+        .guide-section h2 { color: var(--text-primary); font-size: 2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--color-brand); }
+        .guide-section h3 { color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem; }
+        .guide-section p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
+        .guide-section ul, .guide-section ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .guide-section li { color: var(--text-secondary); margin-bottom: 0.8rem; line-height: 1.6; }
+        .tip-box { background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); padding: 1.5rem; border-radius: 15px; margin: 2rem 0; border-left: 4px solid var(--color-brand); }
+        .tip-box h4 { color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .behavior-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .behavior-card { background: var(--card-bg); padding: 1.5rem; border-radius: 15px; text-align: center; transition: all 0.3s ease; }
+        .behavior-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .behavior-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .author-box { background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); display: flex; gap: 1.5rem; align-items: center; margin: 3rem 0; }
+        .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--color-brand); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; flex-shrink: 0; }
+        .social-share { display: flex; gap: 1rem; margin: 2rem 0; }
+        .share-btn { padding: 0.8rem 1.5rem; border-radius: 50px; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; transition: all 0.3s ease; }
+        .share-btn.facebook { background: #1877f2; color: white; }
+        .share-btn.twitter { background: #1da1f2; color: white; }
+        .share-btn.pinterest { background: #e60023; color: white; }
+        .share-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .related-guides { margin-top: 4rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .vocalization-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: var(--card-bg); border-radius: 15px; overflow: hidden; }
+        .vocalization-table th, .vocalization-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+        .vocalization-table th { background: var(--bg-secondary); color: var(--text-primary); font-weight: 600; }
+        .vocalization-table td { color: var(--text-secondary); }
+        @media (max-width: 968px) {
+            .guide-layout { grid-template-columns: 1fr; }
+            .guide-sidebar { position: relative; top: 0; }
+            .guide-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../blog.html" class="nav-link active">Guides</a></li>
+                    <li><a href="../stories.html" class="nav-link">Stories</a></li>
+                    <li><a href="../resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Guide Hero -->
+    <section class="guide-hero">
+        <div class="guide-hero-content">
+            <span style="background: rgba(255,255,255,0.3); padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Cats</span>
+            <h1>Cat Behavior Decoded: Understanding Your Feline</h1>
+            <p style="font-size: 1.2rem; opacity: 0.95;">Master the art of reading body language and vocalizations to truly understand your cat</p>
+            <div class="guide-meta">
+                <span class="guide-meta-item"><i class="far fa-clock"></i> 9 min read</span>
+                <span class="guide-meta-item"><i class="far fa-user"></i> Dr. Jennifer Lee</span>
+                <span class="guide-meta-item"><i class="far fa-calendar"></i> Nov 18, 2025</span>
+                <span class="guide-meta-item"><i class="far fa-heart"></i> 2.3k Likes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Layout -->
+    <div class="guide-layout">
+        <!-- Sidebar TOC -->
+        <aside class="guide-sidebar">
+            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#tail">Tail Language</a></li>
+                <li><a href="#ears">Ear Positions</a></li>
+                <li><a href="#eyes">Eye Communication</a></li>
+                <li><a href="#vocalizations">Vocalizations</a></li>
+                <li><a href="#body-posture">Body Posture</a></li>
+                <li><a href="#kneading">Common Behaviors</a></li>
+                <li><a href="#stress">Stress Signals</a></li>
+            </ul>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Share this guide</h4>
+                <div class="social-share" style="flex-direction: column;">
+                    <button class="share-btn facebook"><i class="fab fa-facebook"></i> Share</button>
+                    <button class="share-btn twitter"><i class="fab fa-twitter"></i> Tweet</button>
+                    <button class="share-btn pinterest"><i class="fab fa-pinterest"></i> Pin</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <article class="guide-content">
+            <section class="guide-section" id="intro">
+                <p style="font-size: 1.1rem; color: var(--text-primary); font-weight: 600;">Cats are often misunderstood as aloof or mysterious, but they're actually quite communicative once you learn their language. Understanding feline body language, vocalizations, and behaviors deepens your bond and helps you respond appropriately to your cat's needs.</p>
+                
+                <p>Unlike dogs, who were bred to work closely with humans, cats are more independent by nature. However, they've developed sophisticated ways to communicate with us. This comprehensive guide will teach you to "speak cat" and understand what your feline friend is really saying.</p>
+            </section>
+
+            <section class="guide-section" id="tail">
+                <h2>Tail Language: The Most Expressive Feature</h2>
+                
+                <p>A cat's tail is like a mood ring - it reveals their emotional state and intentions. Learning to read tail positions and movements is essential for understanding your cat.</p>
+
+                <div class="behavior-grid">
+                    <div class="behavior-card">
+                        <div class="behavior-icon">↑</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Straight Up</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;"><strong>Meaning:</strong> Happy, confident, friendly greeting. "I'm glad to see you!"</p>
+                    </div>
+                    
+                    <div class="behavior-card">
+                        <div class="behavior-icon">?</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Question Mark Shape</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;"><strong>Meaning:</strong> Playful, curious, slightly uncertain but interested.</p>
+                    </div>
+                    
+                    <div class="behavior-card">
+                        <div class="behavior-icon">↓</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Tucked Under Body</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;"><strong>Meaning:</strong> Fearful, anxious, or submissive. Trying to appear smaller.</p>
+                    </div>
+                    
+                    <div class="behavior-card">
+                        <div class="behavior-icon">〰️</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Puffed Up</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;"><strong>Meaning:</strong> Scared or aggressive. Trying to appear larger and more threatening.</p>
+                    </div>
+                    
+                    <div class="behavior-card">
+                        <div class="behavior-icon">⟋⟍</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Thrashing/Thumping</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;"><strong>Meaning:</strong> Agitated, annoyed, or intensely focused (hunting mode).</p>
+                    </div>
+                    
+                    <div class="behavior-card">
+                        <div class="behavior-icon">～</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Gentle Waving</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;"><strong>Meaning:</strong> Mildly annoyed or contemplating action. "I'm thinking about something."</p>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-lightbulb"></i> Context Matters</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Always consider the situation and other body language signals. A twitching tail during play has a different meaning than during petting - during petting, it often means "I've had enough."</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="ears">
+                <h2>Ear Positions: Radar Dishes of Emotion</h2>
+                
+                <p>Cat ears can rotate nearly 180 degrees and move independently, making them incredibly expressive communication tools.</p>
+
+                <h3>What Ear Positions Mean</h3>
+                <ul>
+                    <li><strong>Forward-facing and upright:</strong> Alert, interested, content. "I'm paying attention to what's happening."</li>
+                    <li><strong>Slightly to the sides (airplane ears):</strong> Nervous, anxious, or mildly irritated. Uncertainty about the situation.</li>
+                    <li><strong>Flattened back (against head):</strong> Defensive, scared, or aggressive. "Back off! I feel threatened."</li>
+                    <li><strong>Rotating independently:</strong> Scanning environment, listening to multiple things. Shows alertness and attention.</li>
+                    <li><strong>One ear back, one forward:</strong> Mixed emotions, divided attention, or listening to something behind while watching something in front.</li>
+                </ul>
+
+                <div class="tip-box" style="background: linear-gradient(135deg, #ffc107 20%, #ff9800 100%);">
+                    <h4><i class="fas fa-exclamation-circle"></i> Warning Sign</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Ears pinned completely flat against the head combined with dilated pupils and a low body posture means your cat is frightened and may lash out defensively. Give them space immediately.</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="eyes">
+                <h2>Eye Communication: Windows to the Soul</h2>
+                
+                <p>Cats communicate volumes with their eyes - from slow blinks of affection to wide-eyed alarm.</p>
+
+                <h3>Pupil Size and Eye Contact</h3>
+                <ul>
+                    <li><strong>Slow blink:</strong> The ultimate sign of trust and affection. "I love you and feel safe with you." Try slow-blinking back!</li>
+                    <li><strong>Normal pupils:</strong> Relaxed, content, comfortable with the environment.</li>
+                    <li><strong>Dilated pupils (large):</strong> Excited, playful, scared, or aggressive. Context is crucial here.</li>
+                    <li><strong>Constricted pupils (small slits):</strong> Can indicate aggression or intense focus, but also normal in bright light.</li>
+                    <li><strong>Direct, unblinking stare:</strong> Challenge or threat in cat language. Can make cats uncomfortable.</li>
+                    <li><strong>Half-closed eyes:</strong> Relaxed, sleepy, content, trusting. A sign of a comfortable, happy cat.</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-heart"></i> The Cat "I Love You"</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">When your cat slow-blinks at you, they're showing deep trust and affection. Return the slow blink to communicate your love back. It's like exchanging cat kisses!</p>
+                </div>
+
+                <h3>What Wide Eyes Mean</h3>
+                <p>Sudden pupil dilation can indicate:</p>
+                <ul>
+                    <li>Excitement or playfulness (with relaxed body)</li>
+                    <li>Fear or alarm (with tense body, ears back)</li>
+                    <li>Aggression about to happen (with other aggressive signals)</li>
+                    <li>Pain or discomfort (if persistent with no obvious cause - see a vet)</li>
+                </ul>
+            </section>
+
+            <section class="guide-section" id="vocalizations">
+                <h2>Vocalizations: The Feline Dictionary</h2>
+                
+                <p>Cats have developed a sophisticated vocal repertoire specifically for communicating with humans. Adult cats rarely meow at each other - they reserve this behavior primarily for us!</p>
+
+                <table class="vocalization-table">
+                    <thead>
+                        <tr>
+                            <th>Sound</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Short meow</strong></td>
+                            <td>Standard greeting. "Hello!"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Multiple meows</strong></td>
+                            <td>Excited greeting. "I'm SO happy to see you!"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mid-pitch meow</strong></td>
+                            <td>Request or plea. "I need something."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Long, drawn-out meow</strong></td>
+                            <td>Demand or complaint. "Feed me NOW!" or "I'm unhappy."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Low-pitch meow</strong></td>
+                            <td>Complaint or unhappiness. "I don't like this."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>High-pitch meow</strong></td>
+                            <td>Surprise, pain, or anger. "Ouch!" or "Stop that!"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Purring</strong></td>
+                            <td>Usually contentment, but also self-soothing when sick or scared.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chirping/chattering</strong></td>
+                            <td>Excitement about prey (often at birds through window). Hunting instinct activated.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hissing</strong></td>
+                            <td>Warning! "Stay away, I feel threatened."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Growling</strong></td>
+                            <td>Serious warning. "I will attack if you don't back off."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yowling/caterwauling</strong></td>
+                            <td>Distress, mating calls, or confusion (in senior cats - can indicate cognitive issues).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-comment-dots"></i> Learning Your Cat's Dialect</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Each cat develops their own unique "vocabulary" with their humans. Pay attention to the specific sounds your cat makes in different situations - you'll start to recognize patterns and understand their individual communication style.</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="body-posture">
+                <h2>Body Posture: Reading the Full Picture</h2>
+                
+                <p>Understanding body posture requires looking at the whole cat, not just individual features.</p>
+
+                <h3>Confident and Happy</h3>
+                <ul>
+                    <li>Tail up, possibly with a slight curve at the tip</li>
+                    <li>Ears forward and alert</li>
+                    <li>Walking with purpose, head held high</li>
+                    <li>Relaxed whiskers</li>
+                    <li>May rub against you or objects (scent marking = claiming territory)</li>
+                </ul>
+
+                <h3>Playful and Energetic</h3>
+                <ul>
+                    <li>Tail up with slight twitch at the end</li>
+                    <li>Ears forward, eyes wide with excitement</li>
+                    <li>"Pounce position" - rear end up, front end down</li>
+                    <li>Sudden sideways hops and runs</li>
+                    <li>May bring toys or "present" them</li>
+                </ul>
+
+                <h3>Fearful and Defensive</h3>
+                <ul>
+                    <li>Body low to ground, trying to appear smaller</li>
+                    <li>Tail tucked or wrapped around body</li>
+                    <li>Ears flattened back</li>
+                    <li>Pupils dilated</li>
+                    <li>May hiss or growl if approached</li>
+                    <li>Avoiding eye contact, looking away</li>
+                </ul>
+
+                <h3>Aggressive and Offensive</h3>
+                <ul>
+                    <li>Standing tall, trying to appear larger</li>
+                    <li>Piloerection (fur standing on end)</li>
+                    <li>Tail puffed up</li>
+                    <li>Direct stare, ears forward or flattened</li>
+                    <li>Arched back (the "Halloween cat" pose)</li>
+                    <li>Growling, hissing, or yowling</li>
+                </ul>
+
+                <div class="tip-box" style="background: linear-gradient(135deg, #ff6b6b 20%, #ee5a6f 100%); color: white;">
+                    <h4 style="color: white;"><i class="fas fa-hand-paper"></i> Never Punish Fear or Aggression</h4>
+                    <p style="color: white; margin: 0;">Punishment makes fear and aggression worse. If your cat shows these signs, identify and remove the trigger if possible, give them space, and never force interaction. Consult with a veterinary behaviorist for persistent issues.</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="kneading">
+                <h2>Common Cat Behaviors Explained</h2>
+                
+                <h3>Kneading ("Making Biscuits")</h3>
+                <p><strong>What it is:</strong> Rhythmic pushing in and out with paws, often accompanied by purring.</p>
+                <p><strong>Meaning:</strong> Sign of contentment and affection. Kittens knead their mother while nursing, and adult cats retain this comforting behavior. It means they feel safe and happy.</p>
+
+                <h3>Head Bunting (Head Bumps)</h3>
+                <p><strong>What it is:</strong> Deliberately bumping their head or rubbing their face against you.</p>
+                <p><strong>Meaning:</strong> Marking you with their scent glands (located on cheeks and forehead). This is a sign of affection and claiming you as "theirs." It's a huge compliment!</p>
+
+                <h3>Bringing "Gifts"</h3>
+                <p><strong>What it is:</strong> Leaving dead (or alive) prey at your door or presenting toys to you.</p>
+                <p><strong>Meaning:</strong> Showing affection by sharing their catch, teaching you to hunt, or considering you part of their family. They're caring for you!</p>
+
+                <h3>Zoomies (Sudden Racing)</h3>
+                <p><strong>What it is:</strong> Sudden bursts of frantic running, often at night.</p>
+                <p><strong>Meaning:</strong> Release of pent-up energy, especially in indoor cats. Completely normal! Often occurs after using litter box or during twilight hours when cats are naturally most active.</p>
+
+                <h3>Showing Belly</h3>
+                <p><strong>What it is:</strong> Rolling over to expose their belly.</p>
+                <p><strong>Meaning:</strong> Sign of trust and comfort, NOT necessarily an invitation to pet! Many cats show their belly as a greeting but don't like belly rubs. Read their reaction carefully.</p>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-hand-point-right"></i> Belly Trap!</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Unlike dogs, most cats don't enjoy belly rubs. The exposed belly is a vulnerable position that shows trust, but touching it often triggers their defensive instinct to grab and bunny-kick. Stick to head, chin, and back scratches for most cats!</p>
+                </div>
+
+                <h3>Chattering at Birds</h3>
+                <p><strong>What it is:</strong> Rapid teeth chattering while watching birds or prey through window.</p>
+                <p><strong>Meaning:</strong> Hunting instinct activation. Theories suggest it's frustration at not being able to catch the prey, practice for the killing bite, or excitement mimicking the sound of bird calls.</p>
+            </section>
+
+            <section class="guide-section" id="stress">
+                <h2>Recognizing Stress and Anxiety</h2>
+                
+                <p>Chronic stress affects cats' health and behavior. Early recognition allows you to address the cause before it becomes a serious problem.</p>
+
+                <h3>Signs of Stress</h3>
+                <ul>
+                    <li><strong>Excessive grooming:</strong> Can lead to bald patches or skin lesions</li>
+                    <li><strong>Changes in litter box habits:</strong> Avoiding the box or inappropriate elimination</li>
+                    <li><strong>Decreased appetite:</strong> Or stress eating in some cases</li>
+                    <li><strong>Hiding more than usual:</strong> Withdrawal from family</li>
+                    <li><strong>Excessive vocalization:</strong> Especially if it's a change from normal behavior</li>
+                    <li><strong>Aggression:</strong> Toward people or other pets</li>
+                    <li><strong>Destructive behavior:</strong> Scratching furniture more than usual, knocking things over</li>
+                    <li><strong>Changes in sleeping patterns:</strong> Sleeping much more or restless sleep</li>
+                </ul>
+
+                <h3>Common Stress Triggers</h3>
+                <ul>
+                    <li>Changes in routine or environment (moving, remodeling, new furniture)</li>
+                    <li>New people or pets in the home</li>
+                    <li>Lack of resources (not enough litter boxes, food bowls, perches)</li>
+                    <li>Loud noises or household chaos</li>
+                    <li>Illness or pain</li>
+                    <li>Boredom and lack of stimulation</li>
+                    <li>Conflicts with other pets</li>
+                </ul>
+
+                <h3>Reducing Stress</h3>
+                <ul>
+                    <li>Provide vertical space (cat trees, shelves)</li>
+                    <li>Multiple resources in multi-cat homes (rule: number of cats + 1)</li>
+                    <li>Environmental enrichment (toys, puzzles, window perches)</li>
+                    <li>Consistent routine</li>
+                    <li>Safe hiding spots</li>
+                    <li>Feliway (synthetic pheromone) diffusers</li>
+                    <li>Gradual introductions to changes</li>
+                    <li>Quality one-on-one time daily</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-clinic-medical"></i> When to See the Vet</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Sudden behavior changes can indicate medical issues. Before assuming it's behavioral, rule out health problems. Conditions like hyperthyroidism, diabetes, arthritis, and dental disease can all cause behavior changes.</p>
+                </div>
+            </section>
+
+            <!-- Author Box -->
+            <div class="author-box">
+                <div class="author-avatar"><i class="fas fa-user-md"></i></div>
+                <div>
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Dr. Jennifer Lee, DVM, DACVB</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">Veterinary Behaviorist</p>
+                    <p style="color: var(--text-tertiary); font-size: 0.9rem;">Dr. Lee is a board-certified veterinary behaviorist with 12 years of experience specializing in feline behavior. She's dedicated to helping people understand their cats and building stronger human-feline bonds. She shares her home with four cats, each with their own unique personality!</p>
+                </div>
+            </div>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h2 style="color: var(--text-primary); margin-bottom: 1rem;">Related Guides</h2>
+                <div class="related-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop" alt="Puppy guide">
+                            <span class="article-category">Dogs</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Puppy 101: Complete Guide to Raising a Happy Puppy</h3>
+                            <p class="article-excerpt">Everything you need to know about house training, socialization, and basic commands.</p>
+                            <div class="article-meta">
+                                <span class="read-time"><i class="far fa-clock"></i> 8 min</span>
+                                <a href="puppy-101-guide.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop" alt="Senior pet care">
+                            <span class="article-category">Health</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Senior Pet Care: Golden Years Guide</h3>
+                            <p class="article-excerpt">Comprehensive care for aging pets to ensure comfort and health in their golden years.</p>
+                            <div class="article-meta">
+                                <span class="read-time"><i class="far fa-clock"></i> 10 min</span>
+                                <a href="senior-pet-care.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1573865526739-10c1dd7013e8?w=600&h=400&fit=crop" alt="Cat health">
+                            <span class="article-category">Cats</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Multi-Cat Household Harmony</h3>
+                            <p class="article-excerpt">Tips for managing multiple cats and preventing conflicts.</p>
+                            <div class="article-meta">
+                                <span class="read-time"><i class="far fa-clock"></i> 7 min</span>
+                                <a href="../blog.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html">Pet Care Guides</a></li>
+                        <li><a href="../stories.html">Community Stories</a></li>
+                        <li><a href="../resources.html">Resources</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="../blog.html?filter=cats">Cats</a></li>
+                        <li><a href="../blog.html?filter=birds">Birds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetPals Haven. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="../../index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="../blog.html" class="nav-item active">
+            <i class="fas fa-book"></i>
+            <span>Guides</span>
+        </a>
+        <a href="../stories.html" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Stories</span>
+        </a>
+        <a href="../about.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/animations.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/mobile-nav.js"></script>
+
+    <script>
+        // Active TOC highlighting
+        const sections = document.querySelectorAll('.guide-section');
+        const tocLinks = document.querySelectorAll('.toc-list a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for TOC
+        tocLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Share buttons
+        document.querySelectorAll('.share-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const text = 'Check out this cat behavior guide from PetPals Haven!';
+                const url = window.location.href;
+                
+                if (this.classList.contains('facebook')) {
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+                } else if (this.classList.contains('twitter')) {
+                    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+                } else if (this.classList.contains('pinterest')) {
+                    window.open(`https://pinterest.com/pin/create/button/?url=${url}&description=${text}`, '_blank');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

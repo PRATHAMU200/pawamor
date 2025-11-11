@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Stories - PetPals Haven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/themes.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <style>
+        .stories-hero { min-height: 50vh; display: flex; align-items: center; background: var(--bg-hero); padding-top: 100px; text-align: center; }
+        .detailed-story { background: var(--card-bg); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; box-shadow: var(--shadow-md); }
+        .story-author-section { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 2px solid var(--border-color); }
+        .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--color-brand); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; }
+        .author-info h3 { color: var(--text-primary); margin-bottom: 0.3rem; }
+        .pet-info { color: var(--text-tertiary); display: flex; align-items: center; gap: 0.5rem; }
+        .story-body { line-height: 1.8; color: var(--text-secondary); }
+        .story-body p { margin-bottom: 1.5rem; }
+        .share-story-cta { background: var(--color-primary); padding: 3rem; border-radius: 20px; text-align: center; margin-top: 3rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="blog.html" class="nav-link">Guides</a></li>
+                    <li><a href="stories.html" class="nav-link active">Stories</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="stories-hero">
+        <div class="container">
+            <h1 style="font-size: 3rem; color: var(--text-primary);">Community Stories</h1>
+            <p style="font-size: 1.3rem; color: var(--text-secondary); margin-top: 1rem;">Real experiences from our amazing pet parent community</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <article class="detailed-story" id="sarah-story">
+                <div class="story-author-section">
+                    <div class="author-avatar"><i class="fas fa-user"></i></div>
+                    <div class="author-info">
+                        <h3>Sarah Johnson</h3>
+                        <div class="pet-info"><i class="fas fa-dog"></i><span>Golden Retriever - Max, Age 4</span></div>
+                        <div class="pet-info"><i class="far fa-calendar"></i><span>Adopted March 2021</span></div>
+                    </div>
+                </div>
+                <div class="story-body">
+                    <h2 style="color: var(--text-primary); margin-bottom: 1.5rem;">From Scared Shelter Dog to Confident Companion</h2>
+                    <p>I'll never forget the day I walked into the shelter and saw Max for the first time. He was curled up in the corner of his kennel, trembling. The shelter staff told me he had been found wandering the streets, severely underweight and scared of everything. Most people passed by his kennel without a second glance, but something about his sad eyes touched my heart.</p>
+                    <p>The first few weeks were incredibly challenging. Max was terrified of everything - sudden movements, loud noises, even the sound of the TV. He wouldn't make eye contact and flinched whenever I reached to pet him. I questioned whether I was equipped to help him, but something inside me refused to give up on this gentle soul.</p>
+                    <p>Progress came in tiny increments. First, it was Max eating treats from my hand. Then, after two weeks, he wagged his tail for the first time. I actually cried. Each small victory felt monumental. We worked with a wonderful trainer who specialized in fearful dogs, and slowly, Max began to trust.</p>
+                    <p>Three months in, Max had his breakthrough moment. During a thunderstorm - something that previously would have sent him into a panic - he came and laid his head on my lap. In that moment, I knew we had turned a corner. He was finally understanding that he was safe, that he had a forever home.</p>
+                    <p>Today, four years later, Max is unrecognizable from that scared shelter dog. He greets every morning with enthusiasm, loves meeting new people (yes, really!), and has become my hiking buddy. He still has moments when his past trauma surfaces, but now he knows he has someone who will always be patient and understanding. Max didn't just get a second chance at life - he taught me about resilience, patience, and unconditional love. Adopting him was supposed to be me saving him, but truthfully, he saved me too.</p>
+                </div>
+            </article>
+
+            <article class="detailed-story" id="michael-story">
+                <div class="story-author-section">
+                    <div class="author-avatar"><i class="fas fa-user"></i></div>
+                    <div class="author-info">
+                        <h3>Michael Chen</h3>
+                        <div class="pet-info"><i class="fas fa-cat"></i><span>Tabby Cat - Luna, Age 6</span></div>
+                        <div class="pet-info"><i class="far fa-calendar"></i><span>Found October 2019</span></div>
+                    </div>
+                </div>
+                <div class="story-body">
+                    <h2 style="color: var(--text-primary); margin-bottom: 1.5rem;">The Stray Who Chose Us</h2>
+                    <p>We didn't go looking for a cat. Luna found us. It was a rainy October evening when my wife first spotted her huddled on our front porch, soaking wet and shivering. Being the compassionate person she is, my wife brought out some food and water. Luna devoured it in seconds, suggesting she hadn't eaten in days.</p>
+                    <p>We made a makeshift shelter for her on the porch, thinking she'd leave once the rain stopped. She didn't. Day after day, she waited on our porch. We posted on local lost pet groups, checked with shelters, but no one was looking for her. It seemed Luna had been fending for herself for quite some time.</p>
+                    <p>The decision to bring her inside wasn't easy. My wife was allergic to cats, and I'd never been a "cat person." But how could we leave her outside as winter approached? We set up a vet appointment, got her checked and vaccinated, and tentatively brought her into our home, planning it as a temporary solution until we found her a proper home.</p>
+                    <p>Teaching Luna to trust humans was a journey. She'd clearly had negative experiences with people before. She hid under the couch for the first week, only coming out to eat when we weren't around. We gave her space, talked to her softly, and let her dictate the pace of our relationship.</p>
+                    <p>Her first act of trust came three weeks in. I was reading on the couch when I felt something soft brush against my leg. Luna had ventured out and was tentatively rubbing against me. I held my breath, afraid to move and scare her. She circled twice, then jumped up onto the couch and curled up - not next to me, but in my general vicinity. It was progress.</p>
+                    <p>Six years later, we're not sure who adopted whom. Luna rules our household with an iron paw, and we wouldn't have it any other way. My wife's allergy symptoms mysteriously improved (the power of love, perhaps?), and I've become the biggest cat person you'll ever meet. Luna still has her independent streak, but she's also the most affectionate cat when she wants to be. Every evening, she waits by the door for me to come home, and she sleeps curled up between us every single night. That scared, rain-soaked stray taught us that sometimes the best things in life are the ones we never planned for. Luna chose us, and we're forever grateful she did.</p>
+                </div>
+            </article>
+
+            <article class="detailed-story" id="emily-story">
+                <div class="story-author-section">
+                    <div class="author-avatar"><i class="fas fa-user"></i></div>
+                    <div class="author-info">
+                        <h3>Emily Rodriguez</h3>
+                        <div class="pet-info"><i class="fas fa-dove"></i><span>Cockatiel - Kiwi, Age 3</span></div>
+                        <div class="pet-info"><i class="far fa-calendar"></i><span>Adopted June 2022</span></div>
+                    </div>
+                </div>
+                <div class="story-body">
+                    <h2 style="color: var(--text-primary); margin-bottom: 1.5rem;">The Little Bird with a Big Personality</h2>
+                    <p>People always seem surprised when I tell them about my best friend Kiwi - a cockatiel who weighs less than 100 grams but has a personality bigger than most dogs I've met. I adopted Kiwi from a rescue after his elderly owner could no longer care for him. The rescue warned me he was "a bit noisy" and "very opinionated." That turned out to be the understatement of the century!</p>
+                    <p>From day one, Kiwi made it clear he wasn't your average quiet, cage-bound bird. He had opinions about everything - when he should eat (precisely 6:30 AM, thank you very much), what music we should listen to (he's a fan of Mozart, not so much of rock), and who was allowed to hold him (spoiler: only me, and only when HE decided it was okay).</p>
+                    <p>Training Kiwi has been one of the most rewarding experiences of my life. Birds are incredibly intelligent, and cockatiels in particular are little clowns. Kiwi learned to wolf-whistle within a month, and now uses it strategically - usually when I'm on important work calls. He's learned "step up," can high-five with his foot, and has mastered the art of the dramatic head bob when he wants treats.</p>
+                    <p>The real breakthrough in our relationship came when I started teaching him to forage. In the wild, birds spend most of their day searching for food, and captive birds need that mental stimulation too. I started hiding his favorite millet treats in paper cups, puzzle toys, and crinkled paper. Watching Kiwi figure out these puzzles, seeing his little bird brain work, created a bond between us I never expected.</p>
+                    <p>Kiwi's morning routine has become the highlight of my day. He starts with his signature wolf-whistle to wake me up, followed by his squeaky rendition of "Happy Birthday" (the first song I taught him, and apparently his favorite). While I'm getting ready, he's out of his cage, supervising every activity from his various perches around the room. He joins me for breakfast, nibbling on bird-safe fruits while I have my coffee. He absolutely MUST help with any paperwork, which mostly involves him walking across documents and leaving adorable footprints.</p>
+                    <p>People who don't have birds don't understand the depth of personality these creatures possess. Kiwi has moods, preferences, a sense of humor, and an uncanny ability to read my emotions. When I'm sad, he gets quiet and gentle, softly preening my hair. When I'm happy, he's my energetic cheerleader, singing and dancing. When I'm stressed, he becomes my tiny therapist, just being present.</p>
+                    <p>Yes, bird ownership comes with challenges. Kiwi is messy - there's seed hulls and feather dust everywhere. He's loud - those morning serenades start early. He's demanding - birds are essentially toddlers with wings and they never grow up. But would I trade any of it? Never. That little bird with his fluffy yellow crest and orange cheek patches has enriched my life in ways I never imagined. He's taught me patience, consistency, and the joy of appreciating the small moments. Every day with Kiwi is an adventure, and I'm so grateful he chose to trust me with his big, feathered heart.</p>
+                </div>
+            </article>
+
+            <div class="share-story-cta">
+                <h2 style="color: var(--text-primary); margin-bottom: 1rem;">Share Your Story</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Do you have a heartwarming pet story to share? We'd love to hear about your special bond!</p>
+                <a href="contact.html" class="btn btn-primary">Submit Your Story <i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Guides</a></li>
+                        <li><a href="stories.html">Community Stories</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="blog.html?filter=cats">Cats</a></li>
+                        <li><a href="blog.html?filter=birds">Birds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetPals Haven. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/animations.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

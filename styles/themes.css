@@ -1,0 +1,208 @@
+/* ================================
+   THEME SYSTEM - CSS Variables
+   ================================ */
+
+/* Light Theme (Default) */
+:root {
+    /* Primary Colors - Soft Pastels */
+    --color-primary: #FFE5F1;
+    --color-secondary: #D4F1F9;
+    --color-accent: #FFF9D9;
+    --color-success: #E8F5E9;
+    
+    /* Brand Colors */
+    --color-brand: #FF69B4;
+    --color-brand-dark: #E94560;
+    --color-brand-light: #FFB6D9;
+    
+    /* Background Colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-tertiary: #F0F4F8;
+    --bg-hero: linear-gradient(135deg, #FFE5F1 0%, #D4F1F9 50%, #FFF9D9 100%);
+    
+    /* Text Colors */
+    --text-primary: #2D3748;
+    --text-secondary: #4A5568;
+    --text-tertiary: #718096;
+    --text-inverse: #FFFFFF;
+    
+    /* Border & Shadow */
+    --border-color: #E2E8F0;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 12px 40px rgba(255, 105, 180, 0.2);
+    
+    /* Glass Morphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    
+    /* Card Colors */
+    --card-bg: #FFFFFF;
+    --card-hover-bg: #FAFBFC;
+    
+    /* Navigation */
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    
+    /* Input Colors */
+    --input-bg: #FFFFFF;
+    --input-border: #CBD5E0;
+    --input-focus: #FF69B4;
+    
+    /* Status Colors */
+    --color-info: #4299E1;
+    --color-warning: #F6AD55;
+    --color-error: #FC8181;
+    
+    /* Transition */
+    --transition-speed: 0.3s;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    /* Primary Colors - Deep Blues/Purples */
+    --color-primary: #16213E;
+    --color-secondary: #0F3460;
+    --color-accent: #533483;
+    --color-success: #1A5F3F;
+    
+    /* Brand Colors */
+    --color-brand: #E94560;
+    --color-brand-dark: #C62E4A;
+    --color-brand-light: #FF6B85;
+    
+    /* Background Colors */
+    --bg-primary: #1A1A2E;
+    --bg-secondary: #16213E;
+    --bg-tertiary: #0F3460;
+    --bg-hero: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+    
+    /* Text Colors */
+    --text-primary: #F7FAFC;
+    --text-secondary: #E2E8F0;
+    --text-tertiary: #CBD5E0;
+    --text-inverse: #1A1A2E;
+    
+    /* Border & Shadow */
+    --border-color: #2D3748;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 12px 40px rgba(233, 69, 96, 0.3);
+    
+    /* Glass Morphism */
+    --glass-bg: rgba(22, 33, 62, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    /* Card Colors */
+    --card-bg: #16213E;
+    --card-hover-bg: #1F2F4F;
+    
+    /* Navigation */
+    --nav-bg: rgba(26, 26, 46, 0.95);
+    --nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    
+    /* Input Colors */
+    --input-bg: #0F3460;
+    --input-border: #2D3748;
+    --input-focus: #E94560;
+    
+    /* Status Colors */
+    --color-info: #63B3ED;
+    --color-warning: #F6AD55;
+    --color-error: #FC8181;
+}
+
+/* Theme Transition */
+* {
+    transition: background-color var(--transition-speed) ease,
+                color var(--transition-speed) ease,
+                border-color var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+}
+
+/* Disable transitions on page load */
+.preload * {
+    transition: none !important;
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.toggle-track {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: var(--border-color);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-track:hover {
+    background: var(--color-brand-light);
+}
+
+.sun-icon,
+.moon-icon {
+    font-size: 0.9rem;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.sun-icon {
+    color: #FDB813;
+}
+
+.moon-icon {
+    color: #F7FAFC;
+}
+
+[data-theme="light"] .moon-icon {
+    opacity: 0.3;
+}
+
+[data-theme="dark"] .sun-icon {
+    opacity: 0.3;
+}
+
+.toggle-thumb {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-thumb {
+    transform: translateX(30px);
+    background: var(--color-brand);
+}
+
+/* Smooth Theme Transition Animation */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Override transition for specific elements */
+.hero-background,
+.floating-icon,
+img {
+    transition: opacity var(--transition-speed) ease,
+                transform var(--transition-speed) ease !important;
+}

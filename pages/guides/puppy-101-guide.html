@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy 101: Complete Guide to Raising a Happy Puppy - PetPals Haven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles/themes.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/animations.css">
+    <link rel="stylesheet" href="../../styles/mobile-app.css">
+    <style>
+        .guide-hero { position: relative; height: 60vh; min-height: 400px; background: linear-gradient(135deg, rgba(255, 105, 180, 0.9), rgba(233, 69, 96, 0.8)), url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600&h=900&fit=crop') center/cover; display: flex; align-items: center; color: white; margin-top: 70px; }
+        .guide-hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; text-align: center; padding: 2rem; }
+        .guide-hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .guide-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+        .guide-meta-item { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px); }
+        .guide-content { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .guide-sidebar { position: sticky; top: 100px; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); }
+        .guide-layout { display: grid; grid-template-columns: 250px 1fr; gap: 3rem; max-width: 1400px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.8rem; }
+        .toc-list a { color: var(--text-secondary); text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem; border-radius: 8px; }
+        .toc-list a:hover, .toc-list a.active { color: var(--color-brand); background: var(--bg-secondary); }
+        .guide-section { margin-bottom: 3rem; scroll-margin-top: 100px; }
+        .guide-section h2 { color: var(--text-primary); font-size: 2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--color-brand); }
+        .guide-section h3 { color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem; }
+        .guide-section p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
+        .guide-section ul, .guide-section ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .guide-section li { color: var(--text-secondary); margin-bottom: 0.8rem; line-height: 1.6; }
+        .tip-box { background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); padding: 1.5rem; border-radius: 15px; margin: 2rem 0; border-left: 4px solid var(--color-brand); }
+        .tip-box h4 { color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .checklist { background: var(--bg-secondary); padding: 1.5rem; border-radius: 15px; margin: 1.5rem 0; }
+        .checklist-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; cursor: pointer; }
+        .checklist-item:hover { background: var(--card-bg); }
+        .checklist-item input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; }
+        .author-box { background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); display: flex; gap: 1.5rem; align-items: center; margin: 3rem 0; }
+        .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--color-brand); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; flex-shrink: 0; }
+        .social-share { display: flex; gap: 1rem; margin: 2rem 0; }
+        .share-btn { padding: 0.8rem 1.5rem; border-radius: 50px; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; transition: all 0.3s ease; }
+        .share-btn.facebook { background: #1877f2; color: white; }
+        .share-btn.twitter { background: #1da1f2; color: white; }
+        .share-btn.pinterest { background: #e60023; color: white; }
+        .share-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .related-guides { margin-top: 4rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        @media (max-width: 968px) {
+            .guide-layout { grid-template-columns: 1fr; }
+            .guide-sidebar { position: relative; top: 0; }
+            .guide-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../blog.html" class="nav-link active">Guides</a></li>
+                    <li><a href="../stories.html" class="nav-link">Stories</a></li>
+                    <li><a href="../resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Guide Hero -->
+    <section class="guide-hero">
+        <div class="guide-hero-content">
+            <span style="background: rgba(255,255,255,0.3); padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Dogs</span>
+            <h1>Puppy 101: Complete Guide to Raising a Happy Puppy</h1>
+            <p style="font-size: 1.2rem; opacity: 0.95;">Everything you need to know about house training, socialization, and basic commands</p>
+            <div class="guide-meta">
+                <span class="guide-meta-item"><i class="far fa-clock"></i> 8 min read</span>
+                <span class="guide-meta-item"><i class="far fa-user"></i> Dr. Sarah Mitchell</span>
+                <span class="guide-meta-item"><i class="far fa-calendar"></i> Nov 11, 2025</span>
+                <span class="guide-meta-item"><i class="far fa-heart"></i> 1.2k Likes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Layout -->
+    <div class="guide-layout">
+        <!-- Sidebar TOC -->
+        <aside class="guide-sidebar">
+            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#house-training">House Training Essentials</a></li>
+                <li><a href="#socialization">Socialization Window</a></li>
+                <li><a href="#commands">Basic Commands</a></li>
+                <li><a href="#vaccination">Vaccination Schedule</a></li>
+                <li><a href="#nutrition">Nutrition Guide</a></li>
+                <li><a href="#puppy-proofing">Puppy-Safe Home</a></li>
+                <li><a href="#exercise">Play & Exercise</a></li>
+            </ul>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Share this guide</h4>
+                <div class="social-share" style="flex-direction: column;">
+                    <button class="share-btn facebook"><i class="fab fa-facebook"></i> Share</button>
+                    <button class="share-btn twitter"><i class="fab fa-twitter"></i> Tweet</button>
+                    <button class="share-btn pinterest"><i class="fab fa-pinterest"></i> Pin</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <article class="guide-content">
+            <section class="guide-section" id="intro">
+                <p style="font-size: 1.1rem; color: var(--text-primary); font-weight: 600;">Bringing home a new puppy is one of life's most exciting adventures! Whether you've adopted a playful Golden Retriever or a tiny Chihuahua, the first few months are crucial for developing a healthy, well-adjusted companion.</p>
+                
+                <p>This comprehensive guide will walk you through everything you need to know about puppy care, from house training to socialization, basic commands to health care. By the end, you'll have all the tools to raise a happy, confident, and well-behaved dog.</p>
+            </section>
+
+            <section class="guide-section" id="house-training">
+                <h2>House Training Essentials</h2>
+                
+                <p>House training is often the first challenge new puppy parents face. The key to success is consistency, patience, and positive reinforcement. Puppies typically need to eliminate after waking up, after eating, after playing, and every 2-3 hours during the day.</p>
+
+                <h3>Step-by-Step House Training Plan</h3>
+                
+                <div class="checklist">
+                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;"><i class="fas fa-clipboard-check"></i> House Training Checklist</h4>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="routine">
+                        <label for="routine"><strong>Establish a routine:</strong> Take your puppy out at the same times each day to build a predictable schedule</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="spot">
+                        <label for="spot"><strong>Choose a designated spot:</strong> Always bring them to the same area so they associate it with bathroom time</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="reward">
+                        <label for="reward"><strong>Use positive reinforcement:</strong> Reward immediately after they go in the right spot with treats and praise</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="patience">
+                        <label for="patience"><strong>Be patient with accidents:</strong> Never punish - simply clean up and continue training</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="signals">
+                        <label for="signals"><strong>Watch for signals:</strong> Learn your puppy's "I need to go" behaviors like sniffing or circling</label>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-lightbulb"></i> Pro Tip</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Take your puppy out immediately after they wake up, even if it's just a 10-minute nap. Young puppies have small bladders and can't hold it for long!</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="socialization">
+                <h2>Socialization: The Critical Window</h2>
+                
+                <p>The period between 3 and 14 weeks of age is called the "critical socialization period." During this time, puppies are most receptive to new experiences, and proper socialization can prevent behavior problems later in life.</p>
+
+                <h3>What to Expose Your Puppy To</h3>
+                <ul>
+                    <li><strong>Different people:</strong> Various ages, appearances, voices, and behaviors</li>
+                    <li><strong>Various environments:</strong> Parks, streets, stores that allow pets, different home environments</li>
+                    <li><strong>Different surfaces:</strong> Grass, pavement, carpet, tile, gravel, sand</li>
+                    <li><strong>Other vaccinated dogs:</strong> Friendly, well-socialized adult dogs and puppies</li>
+                    <li><strong>Everyday sounds:</strong> Vacuum cleaner, doorbell, car rides, thunderstorms (recordings)</li>
+                    <li><strong>Handling exercises:</strong> Touching paws, ears, tail, mouth for future vet visits and grooming</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-users"></i> Puppy Socialization Classes</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Join a puppy socialization class! These classes provide structured, safe environments for puppies to learn and play together while building confidence. Look for classes that use positive reinforcement methods only.</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="commands">
+                <h2>Basic Commands Every Puppy Should Learn</h2>
+                
+                <p>Start training early! Puppies are capable learners, and basic commands provide structure and mental stimulation. Training sessions should be short (5-10 minutes), fun, and always end on a positive note.</p>
+
+                <h3>The Essential Five Commands</h3>
+                
+                <ol style="counter-reset: item; list-style: none;">
+                    <li style="counter-increment: item; margin-bottom: 1.5rem;">
+                        <strong style="color: var(--color-brand); font-size: 1.2rem;">1. SIT</strong>
+                        <p>The foundation command - useful before meals, when greeting people, and during grooming. Hold a treat above your puppy's nose, move it back over their head. As their bottom hits the ground, say "Sit" and reward.</p>
+                    </li>
+                    <li style="counter-increment: item; margin-bottom: 1.5rem;">
+                        <strong style="color: var(--color-brand); font-size: 1.2rem;">2. COME</strong>
+                        <p>Essential for safety - could save your dog's life in dangerous situations. Start in a distraction-free environment. Get excited, say "Come!" and reward generously when they reach you.</p>
+                    </li>
+                    <li style="counter-increment: item; margin-bottom: 1.5rem;">
+                        <strong style="color: var(--color-brand); font-size: 1.2rem;">3. STAY</strong>
+                        <p>Teaches impulse control and keeps your puppy safe. Start with sit, hold your hand up, say "Stay," wait 2 seconds, then reward. Gradually increase duration.</p>
+                    </li>
+                    <li style="counter-increment: item; margin-bottom: 1.5rem;">
+                        <strong style="color: var(--color-brand); font-size: 1.2rem;">4. DOWN</strong>
+                        <p>Helps calm excited puppies and is useful during vet visits. From sit, lure with a treat to the ground between their paws. Say "Down" as they lie down and reward.</p>
+                    </li>
+                    <li style="counter-increment: item;">
+                        <strong style="color: var(--color-brand); font-size: 1.2rem;">5. LEAVE IT</strong>
+                        <p>Prevents your puppy from picking up dangerous items. Show a treat in closed fist, say "Leave it." When they stop trying to get it, reward with a different treat.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="guide-section" id="vaccination">
+                <h2>Vaccination Schedule</h2>
+                
+                <p>Protecting your puppy from preventable diseases is crucial. Work closely with your veterinarian to ensure your puppy receives all necessary vaccinations on schedule.</p>
+
+                <h3>Typical Vaccination Timeline</h3>
+                <ul>
+                    <li><strong>6-8 weeks:</strong> First DHPP vaccine (Distemper, Hepatitis, Parvovirus, Parainfluenza)</li>
+                    <li><strong>10-12 weeks:</strong> Second DHPP vaccine, consider Bordetella (kennel cough)</li>
+                    <li><strong>14-16 weeks:</strong> Third DHPP vaccine and Rabies vaccine</li>
+                    <li><strong>12-16 months:</strong> DHPP and Rabies booster shots</li>
+                    <li><strong>Every 1-3 years:</strong> Adult boosters as recommended by your vet</li>
+                </ul>
+
+                <div class="tip-box" style="background: linear-gradient(135deg, #ff6b6b 20%, #ee5a6f 100%); color: white;">
+                    <h4 style="color: white;"><i class="fas fa-exclamation-triangle"></i> Important Note</h4>
+                    <p style="color: white; margin: 0;">Avoid dog parks and areas with unknown dogs until your puppy is fully vaccinated. Parvovirus is highly contagious and can be deadly to unvaccinated puppies.</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="nutrition">
+                <h2>Nutrition for Growing Puppies</h2>
+                
+                <p>Proper nutrition during the puppy stage sets the foundation for a lifetime of good health. Choose a high-quality puppy food formulated for your dog's expected adult size (small, medium, or large breed).</p>
+
+                <h3>Feeding Guidelines by Age</h3>
+                <ul>
+                    <li><strong>8-12 weeks:</strong> 4 small meals per day</li>
+                    <li><strong>3-6 months:</strong> 3 meals per day</li>
+                    <li><strong>6-12 months:</strong> 2 meals per day</li>
+                    <li><strong>Over 12 months:</strong> 1-2 meals per day (depends on breed and size)</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Avoid Overfeeding</h4>
+                    <p style="color: var(--text-secondary); margin: 0;">Excess weight during the growth period can lead to developmental problems, especially in large breed dogs. Follow feeding guidelines on your puppy food package and adjust based on your vet's recommendations. You should be able to feel (but not see) your puppy's ribs.</p>
+                </div>
+            </section>
+
+            <section class="guide-section" id="puppy-proofing">
+                <h2>Creating a Puppy-Safe Home</h2>
+                
+                <p>Puppies are curious and will explore everything with their mouths. Puppy-proofing your home is essential for their safety.</p>
+
+                <div class="checklist">
+                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;"><i class="fas fa-home"></i> Puppy-Proofing Checklist</h4>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="cords">
+                        <label for="cords">Remove or secure electrical cords with cord covers</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="chemicals">
+                        <label for="chemicals">Store cleaning products and medications in secure cabinets</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="plants">
+                        <label for="plants">Remove toxic plants (lilies, azaleas, sago palms, etc.)</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="trash">
+                        <label for="trash">Secure trash cans with locking lids</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="objects">
+                        <label for="objects">Keep small objects that could be choking hazards out of reach</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="stairs">
+                        <label for="stairs">Block off stairs until your puppy is coordinated enough</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="crate">
+                        <label for="crate">Set up a safe, comfortable crate as their "den"</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guide-section" id="exercise">
+                <h2>The Importance of Play and Exercise</h2>
+                
+                <p>Play isn't just fun - it's essential for your puppy's physical and mental development. However, be careful not to over-exercise young puppies, as their bones and joints are still developing.</p>
+
+                <h3>Exercise Rule of Thumb</h3>
+                <p style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 15px; font-size: 1.1rem; text-align: center; color: var(--text-primary); font-weight: 600;">
+                    5 minutes of exercise per month of age, twice daily
+                </p>
+                <p style="text-align: center; color: var(--text-secondary);">Example: A 3-month-old puppy should get about 15 minutes of exercise twice a day</p>
+
+                <h3>Appropriate Activities</h3>
+                <ul>
+                    <li>Short walks at puppy's pace</li>
+                    <li>Gentle indoor play with soft toys</li>
+                    <li>Puzzle toys for mental stimulation</li>
+                    <li>Supervised playtime with other puppies</li>
+                    <li>Training sessions (mental exercise!)</li>
+                </ul>
+
+                <div class="tip-box" style="background: linear-gradient(135deg, #ff6b6b 20%, #ee5a6f 100%); color: white;">
+                    <h4 style="color: white;"><i class="fas fa-ban"></i> Avoid Until Fully Grown</h4>
+                    <p style="color: white; margin: 0;">No jumping, agility, or jogging until bones are fully developed (12-18 months depending on breed). High-impact activities can damage growing joints.</p>
+                </div>
+            </section>
+
+            <!-- Author Box -->
+            <div class="author-box">
+                <div class="author-avatar"><i class="fas fa-user-md"></i></div>
+                <div>
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Dr. Sarah Mitchell, DVM</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">Veterinarian & Pet Care Specialist</p>
+                    <p style="color: var(--text-tertiary); font-size: 0.9rem;">Dr. Mitchell has over 15 years of experience in veterinary medicine and specializes in preventive care and puppy health. She shares her home with three rescue dogs who keep her on her toes!</p>
+                </div>
+            </div>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h2 style="color: var(--text-primary); margin-bottom: 1rem;">Related Guides</h2>
+                <div class="related-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop" alt="Dog training">
+                            <span class="article-category">Training</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Training Techniques: Positive Reinforcement</h3>
+                            <p class="article-excerpt">Master the art of positive reinforcement training for lasting results.</p>
+                            <div class="article-meta">
+                                <span class="read-time"><i class="far fa-clock"></i> 7 min</span>
+                                <a href="../blog.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=600&h=400&fit=crop" alt="Dog nutrition">
+                            <span class="article-category">Nutrition</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Nutrition Guide: Feeding for Optimal Health</h3>
+                            <p class="article-excerpt">Everything you need to know about balanced diets and portion control.</p>
+                            <div class="article-meta">
+                                <span class="read-time"><i class="far fa-clock"></i> 9 min</span>
+                                <a href="../blog.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop" alt="Happy puppy">
+                            <span class="article-category">Health</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Grooming Basics: Keeping Your Pet Clean</h3>
+                            <p class="article-excerpt">Learn proper grooming techniques for a healthy, happy pup.</p>
+                            <div class="article-meta">
+                                <span class="read-time"><i class="far fa-clock"></i> 6 min</span>
+                                <a href="../blog.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html">Pet Care Guides</a></li>
+                        <li><a href="../stories.html">Community Stories</a></li>
+                        <li><a href="../resources.html">Resources</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="../blog.html?filter=cats">Cats</a></li>
+                        <li><a href="../blog.html?filter=birds">Birds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetPals Haven. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="../../index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="../blog.html" class="nav-item active">
+            <i class="fas fa-book"></i>
+            <span>Guides</span>
+        </a>
+        <a href="../stories.html" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Stories</span>
+        </a>
+        <a href="../about.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/animations.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/mobile-nav.js"></script>
+
+    <script>
+        // Active TOC highlighting
+        const sections = document.querySelectorAll('.guide-section');
+        const tocLinks = document.querySelectorAll('.toc-list a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for TOC
+        tocLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Share buttons
+        document.querySelectorAll('.share-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const text = 'Check out this amazing puppy guide from PetPals Haven!';
+                const url = window.location.href;
+                
+                if (this.classList.contains('facebook')) {
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+                } else if (this.classList.contains('twitter')) {
+                    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+                } else if (this.classList.contains('pinterest')) {
+                    window.open(`https://pinterest.com/pin/create/button/?url=${url}&description=${text}`, '_blank');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

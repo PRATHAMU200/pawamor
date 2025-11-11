@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PetPals Haven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/themes.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <style>
+        .contact-hero { min-height: 50vh; display: flex; align-items: center; background: var(--bg-hero); padding-top: 100px; text-align: center; }
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+        .contact-info { background: var(--card-bg); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-md); }
+        .contact-form-section { background: var(--card-bg); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-md); }
+        .info-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: 15px; }
+        .info-icon { width: 50px; height: 50px; background: var(--color-brand); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .info-content h3 { color: var(--text-primary); margin-bottom: 0.5rem; }
+        .info-content p { color: var(--text-secondary); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600; }
+        .form-control { width: 100%; padding: 1rem; border-radius: 10px; border: 2px solid var(--input-border); background: var(--input-bg); color: var(--text-primary); font-family: 'Nunito', sans-serif; font-size: 1rem; transition: border-color 0.3s ease; }
+        .form-control:focus { outline: none; border-color: var(--color-brand); }
+        textarea.form-control { min-height: 150px; resize: vertical; }
+        .form-control.error { border-color: var(--color-error); }
+        .error-message { color: var(--color-error); font-size: 0.875rem; margin-top: 0.5rem; display: none; }
+        .error-message.show { display: block; }
+        @media (max-width: 968px) {
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="blog.html" class="nav-link">Guides</a></li>
+                    <li><a href="stories.html" class="nav-link">Stories</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1 style="font-size: 3rem; color: var(--text-primary);">Get In Touch</h1>
+            <p style="font-size: 1.3rem; color: var(--text-secondary); margin-top: 1rem;">We'd love to hear from you! Share your story, ask a question, or just say hello.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2 style="color: var(--text-primary); margin-bottom: 2rem;">Contact Information</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-content">
+                            <h3>Email Us</h3>
+                            <p>hello@petpalshaven.com</p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">We'll respond within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="info-content">
+                            <h3>Support Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM EST</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-comments"></i></div>
+                        <div class="info-content">
+                            <h3>What Can We Help With?</h3>
+                            <p>• Submit your pet story</p>
+                            <p>• Ask pet care questions</p>
+                            <p>• Report technical issues</p>
+                            <p>• Partnership inquiries</p>
+                            <p>• General feedback</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: 15px;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Connect With Us</h3>
+                        <div class="social-links" style="justify-content: flex-start;">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2 style="color: var(--text-primary); margin-bottom: 2rem;">Send Us a Message</h2>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <span class="error-message" id="nameError">Please enter your name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <span class="error-message" id="emailError">Please enter a valid email</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="petType">Pet Type (Optional)</label>
+                            <select id="petType" name="petType" class="form-control">
+                                <option value="">Select your pet type</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="bird">Bird</option>
+                                <option value="rabbit">Rabbit</option>
+                                <option value="fish">Fish</option>
+                                <option value="reptile">Reptile</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="">Choose a subject</option>
+                                <option value="story">Submit a Story</option>
+                                <option value="question">Pet Care Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="subjectError">Please select a subject</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Tell us what's on your mind..."></textarea>
+                            <span class="error-message" id="messageError">Please enter your message</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <span id="btnText">Send Message</span>
+                            <i class="fas fa-paper-plane" id="btnIcon"></i>
+                        </button>
+
+                        <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: 1rem; text-align: center;">
+                            * Required fields. We respect your privacy and will never share your information.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin-top: 5rem;">
+                <h2 style="color: var(--text-primary); text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Frequently Asked Questions</h2>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: var(--shadow-sm);">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">How do I submit my pet story?</h3>
+                        <p style="color: var(--text-secondary);">Use the contact form above and select "Submit a Story" as the subject. Share your story in the message field - we'd love to hear about your special bond with your pet!</p>
+                    </div>
+
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: var(--shadow-sm);">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Can you provide veterinary advice?</h3>
+                        <p style="color: var(--text-secondary);">While we share general pet care information, we cannot provide specific veterinary advice. For health concerns, always consult with a licensed veterinarian.</p>
+                    </div>
+
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: var(--shadow-sm);">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">How long does it take to get a response?</h3>
+                        <p style="color: var(--text-secondary);">We typically respond to all inquiries within 24 hours during business days. For urgent matters, please contact your local veterinarian or emergency animal hospital.</p>
+                    </div>
+
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow-sm);">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Do you accept guest blog posts?</h3>
+                        <p style="color: var(--text-secondary);">Yes! We welcome contributions from pet professionals and experienced pet owners. Contact us with "Partnership Inquiry" and tell us about your proposed topic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><i class="fas fa-paw"></i><span>PetPals Haven</span></div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Guides</a></li>
+                        <li><a href="stories.html">Community Stories</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="blog.html?filter=cats">Cats</a></li>
+                        <li><a href="blog.html?filter=birds">Birds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetPals Haven. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS (Replace with your actual EmailJS credentials)
+        // Sign up at https://www.emailjs.com/ to get your keys
+        (function() {
+            // emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/animations.js"></script>
+    <script src="../scripts/main.js"></script>
+
+    <script>
+        // Form validation and submission
+        const form = document.getElementById('contactForm');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Validate form
+            if (!validateForm()) return;
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                petType: document.getElementById('petType').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Disable submit button
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+            btnIcon.className = 'fas fa-spinner fa-spin';
+
+            try {
+                // Simulate sending (Replace with actual EmailJS call)
+                await simulateSend(formData);
+                
+                // Success
+                showSuccess();
+                form.reset();
+            } catch (error) {
+                showError();
+            } finally {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+                btnIcon.className = 'fas fa-paper-plane';
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+            
+            // Name validation
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                showFieldError('name', 'nameError');
+                isValid = false;
+            } else {
+                hideFieldError('name', 'nameError');
+            }
+
+            // Email validation
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim() || !emailRegex.test(email.value)) {
+                showFieldError('email', 'emailError');
+                isValid = false;
+            } else {
+                hideFieldError('email', 'emailError');
+            }
+
+            // Subject validation
+            const subject = document.getElementById('subject');
+            if (!subject.value) {
+                showFieldError('subject', 'subjectError');
+                isValid = false;
+            } else {
+                hideFieldError('subject', 'subjectError');
+            }
+
+            // Message validation
+            const message = document.getElementById('message');
+            if (!message.value.trim()) {
+                showFieldError('message', 'messageError');
+                isValid = false;
+            } else {
+                hideFieldError('message', 'messageError');
+            }
+
+            return isValid;
+        }
+
+        function showFieldError(fieldId, errorId) {
+            document.getElementById(fieldId).classList.add('error');
+            document.getElementById(errorId).classList.add('show');
+        }
+
+        function hideFieldError(fieldId, errorId) {
+            document.getElementById(fieldId).classList.remove('error');
+            document.getElementById(errorId).classList.remove('show');
+        }
+
+        function simulateSend(data) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log('Form data:', data);
+                    resolve();
+                }, 1500);
+            });
+        }
+
+        function showSuccess() {
+            if (window.PetPalsUtils) {
+                window.PetPalsUtils.showNotification('Thank you! Your message has been sent successfully. We\'ll get back to you soon! 🐾', 'success');
+            } else {
+                alert('Thank you! Your message has been sent successfully.');
+            }
+        }
+
+        function showError() {
+            if (window.PetPalsUtils) {
+                window.PetPalsUtils.showNotification('Oops! Something went wrong. Please try again.', 'error');
+            } else {
+                alert('Sorry, something went wrong. Please try again.');
+            }
+        }
+
+        // Remove error styling on input
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', function() {
+                this.classList.remove('error');
+                const errorId = this.id + 'Error';
+                const errorEl = document.getElementById(errorId);
+                if (errorEl) errorEl.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
