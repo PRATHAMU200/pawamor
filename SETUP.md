@@ -1,4 +1,4 @@
-# 🚀 Quick Setup Guide - PetPals Haven
+# 🚀 Quick Setup Guide - Pawamor
 
 ## Get Started in 3 Minutes!
 
@@ -200,7 +200,7 @@ npx serve
 
 ## 🎉 You're All Set!
 
-Your PetPals Haven website is ready to go. Enjoy building your pet community! 🐾
+Your Pawamor website is ready to go. Enjoy building your pet community! 🐾
 
 ---
 

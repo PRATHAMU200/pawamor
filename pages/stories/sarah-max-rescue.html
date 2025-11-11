@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sarah's heartwarming rescue story of Max, the Golden Retriever">
+    <title>From Scared Shelter Dog to Confident Companion - Pawamor</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../styles/themes.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/animations.css">
+    <link rel="stylesheet" href="../../styles/mobile-app.css">
+    
+    <style>
+        .story-hero {
+            padding-top: 100px;
+            padding-bottom: 3rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .story-header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-category {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .story-hero h1 {
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .story-author-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .author-avatar {
+            font-size: 3rem;
+            color: var(--text-primary);
+        }
+
+        .author-info h3 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+        }
+
+        .author-info p {
+            margin: 0.3rem 0 0 0;
+            color: var(--text-secondary);
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .story-body {
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .story-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-body h2 {
+            color: var(--text-primary);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .story-quote {
+            background: var(--card-bg);
+            border-left: 4px solid var(--color-brand);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .story-timeline {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .timeline-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-primary);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .story-reaction {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+        }
+
+        .reaction-button {
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .reaction-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .reaction-count {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        .related-stories {
+            background: var(--section-bg);
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .related-stories h2 {
+            text-align: center;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .related-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .related-card h3 {
+            color: var(--text-primary);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .related-card p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .story-hero h1 {
+                font-size: 2rem;
+            }
+
+            .story-content {
+                padding: 0 1rem;
+            }
+
+            .story-body {
+                font-size: 1rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <span>Pawamor</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../blog.html" class="nav-link">Guides</a></li>
+                    <li><a href="../stories.html" class="nav-link active">Stories</a></li>
+                    <li><a href="../resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Hero -->
+    <section class="story-hero">
+        <div class="container">
+            <div class="story-header-content">
+                <span class="story-category"><i class="fas fa-dog"></i> Dog Rescue</span>
+                <h1>From Scared Shelter Dog to Confident Companion</h1>
+                <div class="story-author-meta">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="author-info">
+                        <h3>Sarah Johnson</h3>
+                        <p><i class="fas fa-paw"></i> Max the Golden Retriever</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Content -->
+    <section class="story-content">
+        <div class="story-body">
+            <p>I'll never forget the day I walked into the shelter and saw Max for the first time. He was curled up in the corner of his kennel, trembling, with his beautiful golden fur matted and dull. His eyes told a story of abandonment and fear that broke my heart into a million pieces. But beneath that scared exterior, I saw something else – a spark of hope, a gentle soul yearning for love and safety.</p>
+
+            <p>The shelter staff told me Max had been found wandering the streets, malnourished and scared. He'd been at the shelter for three months, and his time was running out. Most people passed his kennel without a second glance, drawn to the more energetic, confident dogs. But I couldn't look away. Something in those sad brown eyes called out to me.</p>
+
+            <div class="story-quote">
+                "Sometimes the pets who need us most are the ones who don't know how to ask for help."
+            </div>
+
+            <h2>The First Days</h2>
+
+            <p>Bringing Max home was both exciting and challenging. He wouldn't eat, wouldn't play, and spent most of his time hiding under the dining room table. Every sudden movement made him flinch. Every loud noise sent him running. My heart ached watching him struggle with even the simplest aspects of normal dog life.</p>
+
+            <p>But I was patient. I gave him space when he needed it and gentle encouragement when he was ready. I sat on the floor near his hiding spot, reading books aloud just so he could get used to my voice. I'd leave treats nearby and slowly move them closer to me each day. Small victories became celebrations – the first time he took a treat from my hand, the first time he wagged his tail, the first time he voluntarily came out from under the table.</p>
+
+            <h2>The Breakthrough</h2>
+
+            <p>The real breakthrough came about two weeks in. I was sitting in the living room when Max slowly approached me. He stood a few feet away, just watching. Then, ever so cautiously, he took a step closer. And another. My heart was racing, but I stayed perfectly still. When he finally reached me and gently placed his head on my lap, tears streamed down my face. It was the first time he'd initiated contact, the first time he'd shown me he was beginning to trust.</p>
+
+            <p>From that moment on, things changed. It wasn't a magical overnight transformation – Max still had his fearful moments, his triggers, his setbacks. But we worked through them together. Every day brought a little more confidence, a little more joy. The scared, trembling dog I'd met at the shelter was slowly being replaced by a playful, loving companion.</p>
+
+            <div class="story-timeline">
+                <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 2rem;">Max's Journey to Confidence</h3>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Day 1: Adoption Day</h4>
+                        <p>Max wouldn't make eye contact and hid under the table immediately upon arriving home.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Day 7: First Touch</h4>
+                        <p>Max took a treat from my hand for the first time – a huge milestone!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Day 14: The Breakthrough</h4>
+                        <p>Max initiated contact by placing his head on my lap – the moment I knew we'd be okay.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Month 2: First Playtime</h4>
+                        <p>Max picked up a toy and brought it to me to play – his playful personality emerging.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Month 6: True Confidence</h4>
+                        <p>Max greeted guests with tail wags instead of hiding – completely transformed.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Today: Therapy Dog Certified</h4>
+                        <p>Max now helps other scared shelter dogs adjust to new situations – coming full circle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Life Today</h2>
+
+            <p>Today, Max is a completely different dog. His coat shines, his eyes sparkle with joy, and his tail never stops wagging. He greets every person and dog we meet with enthusiasm and confidence. He's become a certified therapy dog, using his gentle nature and inspiring story to comfort others.</p>
+
+            <p>The most beautiful part? Max now helps other scared shelter dogs at the local rescue. We visit weekly, and he patiently sits with the fearful ones, showing them that it's okay to trust again. Watching him comfort other dogs the way I once comforted him brings tears to my eyes every single time.</p>
+
+            <p>Max didn't just find a home with me – I found my purpose through him. He taught me about patience, resilience, and unconditional love. He showed me that sometimes the greatest rewards come from giving a chance to those who need it most.</p>
+
+            <div class="story-quote">
+                "Rescue dogs aren't broken. They've simply experienced more life than other dogs. If you are willing to open your heart and home, they have so much love to give." – Sarah
+            </div>
+
+            <p>To anyone considering adopting a rescue dog, especially one with a difficult past: yes, it requires patience. Yes, there will be challenges. But the journey you'll take together, the trust you'll build, and the love you'll share – it's worth every single moment. Max didn't just rescue his spirit when I brought him home. He rescued mine too.</p>
+        </div>
+
+        <!-- Reaction Section -->
+        <div class="story-reaction">
+            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Did this story touch your heart?</h3>
+            <button class="reaction-button" onclick="addHeart()">
+                <i class="fas fa-heart"></i>
+                Send Love
+            </button>
+            <p class="reaction-count"><span id="heartCount">1,247</span> people loved this story</p>
+        </div>
+    </section>
+
+    <!-- Related Stories -->
+    <section class="related-stories">
+        <div class="container">
+            <h2>More Heartwarming Stories</h2>
+            <div class="related-grid">
+                <a href="michael-luna-adoption.html" class="related-card">
+                    <h3><i class="fas fa-cat"></i> The Stray Who Chose Us</h3>
+                    <p>Michael's story of how a stray cat found her forever home on their front porch</p>
+                </a>
+                <a href="emily-kiwi-cockatiel.html" class="related-card">
+                    <h3><i class="fas fa-dove"></i> The Little Bird with a Big Personality</h3>
+                    <p>Emily shares life with Kiwi, the cockatiel who thinks he's a dog</p>
+                </a>
+                <a href="../stories.html" class="related-card">
+                    <h3><i class="fas fa-book-heart"></i> Read More Stories</h3>
+                    <p>Discover more amazing pet stories from our community</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-paw"></i>
+                        <span>Pawamor</span>
+                    </div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html">Pet Care Guides</a></li>
+                        <li><a href="../stories.html">Community Stories</a></li>
+                        <li><a href="../resources.html">Resources</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="../blog.html?filter=cats">Cats</a></li>
+                        <li><a href="../blog.html?filter=birds">Birds</a></li>
+                        <li><a href="../blog.html?filter=small-pets">Small Pets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pawamor. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="../../index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="../blog.html" class="nav-item">
+            <i class="fas fa-book"></i>
+            <span>Guides</span>
+        </a>
+        <a href="../stories.html" class="nav-item active">
+            <i class="fas fa-heart"></i>
+            <span>Stories</span>
+        </a>
+        <a href="../about.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/animations.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/mobile-nav.js"></script>
+
+    <script>
+        // Heart reaction functionality
+        function addHeart() {
+            const countElement = document.getElementById('heartCount');
+            let currentCount = parseInt(countElement.textContent.replace(/,/g, ''));
+            currentCount++;
+            countElement.textContent = currentCount.toLocaleString();
+            
+            // Animate button
+            const button = document.querySelector('.reaction-button');
+            button.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        // Smooth scroll for timeline
+        if (typeof gsap !== 'undefined') {
+            gsap.set('.timeline-item', { opacity: 1 });
+            
+            gsap.from('.timeline-item', {
+                scrollTrigger: {
+                    trigger: '.story-timeline',
+                    start: 'top 80%'
+                },
+                opacity: 0,
+                x: -30,
+                stagger: 0.15,
+                duration: 0.6,
+                clearProps: 'all'
+            });
+        }
+    </script>
+</body>
+</html>

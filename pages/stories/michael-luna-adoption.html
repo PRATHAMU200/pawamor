@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael's heartwarming adoption story of Luna, the stray cat">
+    <title>The Stray Who Chose Us - Pawamor</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../styles/themes.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/animations.css">
+    <link rel="stylesheet" href="../../styles/mobile-app.css">
+    
+    <style>
+        .story-hero {
+            padding-top: 100px;
+            padding-bottom: 3rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .story-header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-category {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .story-hero h1 {
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .story-author-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .author-avatar {
+            font-size: 3rem;
+            color: var(--text-primary);
+        }
+
+        .author-info h3 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+        }
+
+        .author-info p {
+            margin: 0.3rem 0 0 0;
+            color: var(--text-secondary);
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .story-body {
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .story-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-body h2 {
+            color: var(--text-primary);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .story-quote {
+            background: var(--card-bg);
+            border-left: 4px solid var(--color-brand);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .story-timeline {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .timeline-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-primary);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .story-reaction {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+        }
+
+        .reaction-button {
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .reaction-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .reaction-count {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        .related-stories {
+            background: var(--section-bg);
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .related-stories h2 {
+            text-align: center;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .related-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .related-card h3 {
+            color: var(--text-primary);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .related-card p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .story-hero h1 {
+                font-size: 2rem;
+            }
+
+            .story-content {
+                padding: 0 1rem;
+            }
+
+            .story-body {
+                font-size: 1rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <span>Pawamor</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../blog.html" class="nav-link">Guides</a></li>
+                    <li><a href="../stories.html" class="nav-link active">Stories</a></li>
+                    <li><a href="../resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Hero -->
+    <section class="story-hero">
+        <div class="container">
+            <div class="story-header-content">
+                <span class="story-category"><i class="fas fa-cat"></i> Cat Adoption</span>
+                <h1>The Stray Who Chose Us</h1>
+                <div class="story-author-meta">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="author-info">
+                        <h3>Michael Chen</h3>
+                        <p><i class="fas fa-paw"></i> Luna the Tabby Cat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Content -->
+    <section class="story-content">
+        <div class="story-body">
+            <p>We didn't go looking for a cat. Luna found us. It was a rainy October evening when my wife first spotted her – a small, soaking wet tabby cat huddled on our front porch, meowing pitifully. Her fur was matted, she was painfully thin, and one of her ears had a small notch, likely from a fight. But her green eyes, despite looking exhausted and wary, held a determination that touched our hearts.</p>
+
+            <p>We brought out some food and water, expecting her to eat and run. Instead, she ate slowly, never taking her eyes off us, and then – to our surprise – she sat down right there on the porch mat, curled into a tight ball, and refused to leave. It was as if she'd decided: this is my home now. These are my people.</p>
+
+            <div class="story-quote">
+                "Sometimes the best things in life are the ones that choose you, not the other way around."
+            </div>
+
+            <h2>Building Trust</h2>
+
+            <p>The next morning, she was still there. And the morning after that. We set up a little shelter on the porch with blankets and continued feeding her. My wife wanted to bring her inside immediately, but I was hesitant. I'd never been a "cat person," and the thought of an untamed stray living in our home worried me.</p>
+
+            <p>But Luna was persistent. Every time we came to the door, she'd meow and rub against our legs. She'd follow us around the yard when we did gardening. She'd sit at the window and watch us eat dinner. It became clear she wasn't going anywhere, and honestly, we didn't want her to. After two weeks of outdoor visits and vet checkups, we finally opened our door – and our hearts – to her.</p>
+
+            <h2>The Transformation</h2>
+
+            <p>Luna's first weeks inside were an adventure. She explored every corner, climbed every shelf, and claimed every sunny spot as her own. But more importantly, she showered us with affection we never knew cats were capable of. She'd follow me from room to room, curl up on my laptop while I worked, and purr so loudly you could hear her from across the house.</p>
+
+            <p>The biggest surprise? She turned me into a cat person. I found myself looking forward to coming home to her greeting at the door, her head-bumps demanding attention, her funny habit of "chirping" at birds through the window. This stray cat who chose us didn't just find a home – she transformed our home into something warmer, fuller, and infinitely better.</p>
+
+            <div class="story-timeline">
+                <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 2rem;">Luna's Journey to Forever Home</h3>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Day 1: Rainy Night</h4>
+                        <p>Luna appeared on our porch, wet and hungry, and decided she was staying.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Week 1: Daily Visits</h4>
+                        <p>Fed Luna twice daily on the porch. She never missed a meal and never left.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Week 2: Vet Visit</h4>
+                        <p>Got Luna checked, vaccinated, and treated for minor issues. She was surprisingly calm.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Week 3: Coming Inside</h4>
+                        <p>Finally brought Luna indoors. She walked in like she owned the place!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Month 1: First Purr Session</h4>
+                        <p>Luna fell asleep on my lap purring – the moment I became a cat person.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Today: Queen of the House</h4>
+                        <p>Luna rules our home with love, sass, and endless entertainment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Life with Luna</h2>
+
+            <p>Three years later, Luna is thriving. Her coat is sleek and shiny, she's gained a healthy amount of weight, and that notched ear has become her signature look. She's confident, playful, and has a personality bigger than most dogs I've met. She's also become somewhat of a local celebrity – our neighbors all know and love her, especially when she makes her "rounds" checking in on the neighborhood from her safe perch on our windowsill.</p>
+
+            <p>What amazes me most is how a stray cat taught us about unconditional love and acceptance. Luna didn't ask for much – just food, shelter, and kindness. In return, she gave us everything she had: her trust, her affection, and her companionship. She chose us, and in doing so, she made our house a true home.</p>
+
+            <p>My wife likes to joke that Luna trained us better than we trained her. And honestly? She's probably right. Luna taught me to slow down, to appreciate the simple joys of sunbeam naps and window-watching, to understand that love comes in many forms – including from a stubborn tabby cat who refused to take no for an answer.</p>
+
+            <div class="story-quote">
+                "Luna didn't just need us. It turns out, we needed her too. She filled a space in our lives we didn't even know was empty." – Michael
+            </div>
+
+            <p>To anyone who sees a stray animal in need: please don't turn away. Whether you can offer a forever home or just help them find one, you never know how much that one act of kindness might change both your lives. Luna came to us as a scared, wet, hungry stray. Today, she's family. And we wouldn't have it any other way.</p>
+        </div>
+
+        <!-- Reaction Section -->
+        <div class="story-reaction">
+            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Did this story touch your heart?</h3>
+            <button class="reaction-button" onclick="addHeart()">
+                <i class="fas fa-heart"></i>
+                Send Love
+            </button>
+            <p class="reaction-count"><span id="heartCount">892</span> people loved this story</p>
+        </div>
+    </section>
+
+    <!-- Related Stories -->
+    <section class="related-stories">
+        <div class="container">
+            <h2>More Heartwarming Stories</h2>
+            <div class="related-grid">
+                <a href="sarah-max-rescue.html" class="related-card">
+                    <h3><i class="fas fa-dog"></i> From Scared Shelter Dog to Confident Companion</h3>
+                    <p>Sarah's journey with Max, the Golden Retriever who learned to trust again</p>
+                </a>
+                <a href="emily-kiwi-cockatiel.html" class="related-card">
+                    <h3><i class="fas fa-dove"></i> The Little Bird with a Big Personality</h3>
+                    <p>Emily shares life with Kiwi, the cockatiel who thinks he's a dog</p>
+                </a>
+                <a href="../stories.html" class="related-card">
+                    <h3><i class="fas fa-book-heart"></i> Read More Stories</h3>
+                    <p>Discover more amazing pet stories from our community</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-paw"></i>
+                        <span>Pawamor</span>
+                    </div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html">Pet Care Guides</a></li>
+                        <li><a href="../stories.html">Community Stories</a></li>
+                        <li><a href="../resources.html">Resources</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="../blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="../blog.html?filter=cats">Cats</a></li>
+                        <li><a href="../blog.html?filter=birds">Birds</a></li>
+                        <li><a href="../blog.html?filter=small-pets">Small Pets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pawamor. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="../../index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="../blog.html" class="nav-item">
+            <i class="fas fa-book"></i>
+            <span>Guides</span>
+        </a>
+        <a href="../stories.html" class="nav-item active">
+            <i class="fas fa-heart"></i>
+            <span>Stories</span>
+        </a>
+        <a href="../about.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/animations.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/mobile-nav.js"></script>
+
+    <script>
+        // Heart reaction functionality
+        function addHeart() {
+            const countElement = document.getElementById('heartCount');
+            let currentCount = parseInt(countElement.textContent.replace(/,/g, ''));
+            currentCount++;
+            countElement.textContent = currentCount.toLocaleString();
+            
+            // Animate button
+            const button = document.querySelector('.reaction-button');
+            button.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        // Smooth scroll for timeline
+        if (typeof gsap !== 'undefined') {
+            gsap.set('.timeline-item', { opacity: 1 });
+            
+            gsap.from('.timeline-item', {
+                scrollTrigger: {
+                    trigger: '.story-timeline',
+                    start: 'top 80%'
+                },
+                opacity: 0,
+                x: -30,
+                stagger: 0.15,
+                duration: 0.6,
+                clearProps: 'all'
+            });
+        }
+    </script>
+</body>
+</html>

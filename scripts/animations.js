@@ -161,22 +161,28 @@
     // Section headers
     const headers = document.querySelectorAll(".section-header");
     headers.forEach((header) => {
+      // Set initial state
+      gsap.set(header, { opacity: 1 });
+
       gsap.from(header, {
         scrollTrigger: {
           trigger: header,
-          start: "top 80%",
+          start: "top 85%",
           toggleActions: "play none none none",
         },
         opacity: 0,
-        y: 50,
-        duration: 0.8,
-        ease: "power3.out",
+        y: 30,
+        duration: 0.6,
+        ease: "power2.out",
+        clearProps: "all",
       });
     });
 
     // Section CTAs
     const ctas = document.querySelectorAll(".section-cta");
     ctas.forEach((cta) => {
+      gsap.set(cta, { opacity: 1 });
+
       gsap.from(cta, {
         scrollTrigger: {
           trigger: cta,
@@ -184,9 +190,10 @@
           toggleActions: "play none none none",
         },
         opacity: 0,
-        y: 30,
-        duration: 0.6,
+        y: 20,
+        duration: 0.5,
         ease: "power2.out",
+        clearProps: "all",
       });
     });
   }
@@ -196,35 +203,48 @@
     // Article cards
     const articleCards = document.querySelectorAll(".article-card");
     if (articleCards.length > 0) {
-      gsap.from(articleCards, {
-        scrollTrigger: {
-          trigger: ".articles-grid",
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-        opacity: 0,
-        y: 60,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
+      articleCards.forEach((card, index) => {
+        // Ensure cards are visible by default
+        gsap.set(card, { opacity: 1, y: 0 });
+
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none none",
+            once: true, // Only animate once
+          },
+          opacity: 0,
+          y: 20,
+          duration: 0.4,
+          delay: index * 0.05,
+          ease: "power2.out",
+          clearProps: "all",
+        });
       });
     }
 
     // Story cards
     const storyCards = document.querySelectorAll(".story-card");
     if (storyCards.length > 0) {
-      gsap.from(storyCards, {
-        scrollTrigger: {
-          trigger: ".stories-grid",
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-        opacity: 0,
-        scale: 0.9,
-        y: 40,
-        duration: 0.7,
-        stagger: 0.15,
-        ease: "back.out(1.2)",
+      storyCards.forEach((card, index) => {
+        // Ensure cards are visible by default
+        gsap.set(card, { opacity: 1, y: 0 });
+
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none none",
+            once: true, // Only animate once
+          },
+          opacity: 0,
+          y: 20,
+          duration: 0.4,
+          delay: index * 0.05,
+          ease: "power2.out",
+          clearProps: "all",
+        });
       });
     }
   }

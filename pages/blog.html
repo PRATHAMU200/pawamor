@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expert pet care guides and tips for dogs, cats, and other beloved companions">
-    <title>Pet Care Guides - PetPals Haven</title>
+    <title>Pet Care Guides - Pawamor</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -16,153 +16,15 @@
     <link rel="stylesheet" href="../styles/themes.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/animations.css">
-    
-    <style>
-        .blog-hero {
-            min-height: 50vh;
-            display: flex;
-            align-items: center;
-            background: var(--bg-hero);
-            padding-top: 100px;
-            text-align: center;
-        }
-
-        .filter-section {
-            background: var(--bg-secondary);
-            padding: 2rem 0;
-            margin-bottom: 3rem;
-            border-radius: 20px;
-        }
-
-        .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .filter-btn {
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            color: var(--text-primary);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--color-brand);
-            color: white;
-            border-color: var(--color-brand);
-            transform: translateY(-2px);
-        }
-
-        .blog-article {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
-        }
-
-        .blog-article:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-5px);
-        }
-
-        .article-header-section {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        .article-meta-info {
-            display: flex;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-tertiary);
-        }
-
-        .article-content-section {
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-
-        .article-content-section h3 {
-            color: var(--text-primary);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .article-content-section ul,
-        .article-content-section ol {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-content-section li {
-            margin-bottom: 0.8rem;
-            list-style: disc;
-        }
-
-        .article-content-section p {
-            margin-bottom: 1.5rem;
-        }
-
-        .tip-box {
-            background: var(--color-primary);
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 4px solid var(--color-brand);
-        }
-
-        .tip-box h4 {
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .search-box {
-            max-width: 600px;
-            margin: 0 auto 3rem;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            border: 2px solid var(--input-border);
-            background: var(--input-bg);
-            color: var(--text-primary);
-            font-size: 1rem;
-            font-family: 'Nunito', sans-serif;
-        }
-
-        @media (max-width: 768px) {
-            .blog-article {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/mobile-app.css">
 </head>
-<body>
+<body class="page-blog">
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo">
                 <i class="fas fa-paw"></i>
-                <span>PetPals Haven</span>
+                <span>Pawamor</span>
             </div>
             
             <div class="nav-menu" id="navMenu">
@@ -195,388 +57,179 @@
     </nav>
 
     <!-- Blog Hero -->
-    <section class="blog-hero">
+    <section class="hero" style="min-height: 50vh; padding-top: 100px;">
         <div class="container">
-            <h1 style="font-size: 3rem; color: var(--text-primary);">Pet Care Guides</h1>
-            <p style="font-size: 1.3rem; color: var(--text-secondary); margin-top: 1rem;">Expert advice for every stage of your pet's life</p>
+            <div class="hero-content" style="text-align: center;">
+                <h1 style="font-size: 3rem; color: var(--text-primary); margin-bottom: 1rem;">Pet Care Guides</h1>
+                <p style="font-size: 1.3rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Expert advice for every stage of your pet's life journey</p>
+            </div>
         </div>
     </section>
 
     <!-- Search & Filter -->
-    <section class="section">
+    <section class="section" style="padding-top: 2rem;">
         <div class="container">
-            <div class="search-box">
-                <input type="text" class="search-input" id="searchInput" placeholder="Search guides...">
+            <div class="search-box" style="max-width: 600px; margin: 0 auto 2rem; position: relative;">
+                <i class="fas fa-search" style="position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); color: var(--text-tertiary);"></i>
+                <input type="text" id="searchInput" placeholder="Search guides..." style="width: 100%; padding: 1rem 1rem 1rem 3.5rem; border-radius: 50px; border: 2px solid var(--border-color); background: var(--card-bg); color: var(--text-primary); font-size: 1rem;">
             </div>
 
-            <div class="filter-section">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All Guides</button>
-                    <button class="filter-btn" data-filter="dogs">Dogs</button>
-                    <button class="filter-btn" data-filter="cats">Cats</button>
-                    <button class="filter-btn" data-filter="health">Health</button>
-                    <button class="filter-btn" data-filter="training">Training</button>
-                    <button class="filter-btn" data-filter="nutrition">Nutrition</button>
+            <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 20px; margin-bottom: 3rem;">
+                <div class="filter-buttons" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                    <button class="filter-btn active" data-filter="all" style="padding: 0.7rem 1.5rem; border-radius: 50px; background: var(--color-brand); border: 2px solid var(--color-brand); color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">All Guides</button>
+                    <button class="filter-btn" data-filter="dogs" style="padding: 0.7rem 1.5rem; border-radius: 50px; background: var(--card-bg); border: 2px solid var(--border-color); color: var(--text-primary); font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Dogs</button>
+                    <button class="filter-btn" data-filter="cats" style="padding: 0.7rem 1.5rem; border-radius: 50px; background: var(--card-bg); border: 2px solid var(--border-color); color: var(--text-primary); font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Cats</button>
+                    <button class="filter-btn" data-filter="health" style="padding: 0.7rem 1.5rem; border-radius: 50px; background: var(--card-bg); border: 2px solid var(--border-color); color: var(--text-primary); font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Health</button>
+                    <button class="filter-btn" data-filter="training" style="padding: 0.7rem 1.5rem; border-radius: 50px; background: var(--card-bg); border: 2px solid var(--border-color); color: var(--text-primary); font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Training</button>
+                    <button class="filter-btn" data-filter="nutrition" style="padding: 0.7rem 1.5rem; border-radius: 50px; background: var(--card-bg); border: 2px solid var(--border-color); color: var(--text-primary); font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Nutrition</button>
                 </div>
             </div>
 
-            <!-- Article 1: Puppy Guide -->
-            <article class="blog-article filter-item" data-category="dogs" id="puppy-guide">
-                <div class="article-header-section">
-                    <span class="article-category" style="display: inline-block; margin-bottom: 1rem;">Dogs</span>
-                    <h2 style="font-size: 2.5rem; color: var(--text-primary);">Puppy 101: Your Complete Guide to Raising a Happy Puppy</h2>
-                    <div class="article-meta-info">
-                        <span class="meta-item"><i class="far fa-clock"></i> 8 min read</span>
-                        <span class="meta-item"><i class="far fa-user"></i> Dr. Sarah Mitchell</span>
-                        <span class="meta-item"><i class="far fa-calendar"></i> Updated Nov 2025</span>
+            <!-- Guide Cards Grid -->
+            <div class="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                
+                <!-- Guide 1: Puppy 101 -->
+                <article class="article-card filter-item" data-category="dogs">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop" alt="Cute puppy">
+                        <span class="article-category">Dogs</span>
                     </div>
-                </div>
-
-                <div class="article-content-section">
-                    <p>Bringing home a new puppy is one of life's most exciting adventures! Whether you've adopted a playful Golden Retriever or a tiny Chihuahua, the first few months are crucial for developing a healthy, well-adjusted companion. This comprehensive guide will walk you through everything you need to know about puppy care.</p>
-
-                    <h3>House Training Essentials</h3>
-                    <p>House training is often the first challenge new puppy parents face. The key to success is consistency, patience, and positive reinforcement. Puppies typically need to eliminate after waking up, after eating, after playing, and every 2-3 hours during the day.</p>
-                    
-                    <ul>
-                        <li><strong>Establish a routine:</strong> Take your puppy out at the same times each day</li>
-                        <li><strong>Choose a designated spot:</strong> Always bring them to the same area</li>
-                        <li><strong>Use positive reinforcement:</strong> Reward immediately after they go in the right spot</li>
-                        <li><strong>Be patient with accidents:</strong> Never punish - simply clean up and continue training</li>
-                        <li><strong>Watch for signals:</strong> Learn your puppy's "I need to go" behaviors like sniffing or circling</li>
-                    </ul>
-
-                    <h3>Socialization: The Critical Window</h3>
-                    <p>The period between 3 and 14 weeks of age is called the "critical socialization period." During this time, puppies are most receptive to new experiences, and proper socialization can prevent behavior problems later in life.</p>
-                    
-                    <ul>
-                        <li>Introduce your puppy to different people (various ages, appearances, and voices)</li>
-                        <li>Expose them to various environments (parks, streets, stores that allow pets)</li>
-                        <li>Let them experience different surfaces (grass, pavement, carpet, tile)</li>
-                        <li>Introduce them to other vaccinated, friendly dogs</li>
-                        <li>Familiarize them with everyday sounds (vacuum, doorbell, car rides)</li>
-                    </ul>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-lightbulb"></i> Pro Tip</h4>
-                        <p>Join a puppy socialization class! These classes provide structured, safe environments for puppies to learn and play together while building confidence.</p>
+                    <div class="article-content">
+                        <h3 class="article-title">Puppy 101: Complete Guide to Raising a Happy Puppy</h3>
+                        <p class="article-excerpt">Everything you need to know about house training, socialization, and basic commands. Learn the essentials of raising a well-adjusted, happy puppy from day one.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                            <a href="guides/puppy-101-guide.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
+                </article>
 
-                    <h3>Basic Commands Every Puppy Should Learn</h3>
-                    <p>Start training early! Puppies are capable learners, and basic commands provide structure and mental stimulation.</p>
-                    
-                    <ol>
-                        <li><strong>Sit:</strong> The foundation command - useful before meals, when greeting people, and during grooming</li>
-                        <li><strong>Come:</strong> Essential for safety - could save your dog's life in dangerous situations</li>
-                        <li><strong>Stay:</strong> Teaches impulse control and keeps your puppy safe</li>
-                        <li><strong>Down:</strong> Helps calm excited puppies and is useful during vet visits</li>
-                        <li><strong>Leave it:</strong> Prevents your puppy from picking up dangerous items</li>
-                    </ol>
-
-                    <h3>Vaccination Schedule</h3>
-                    <p>Protecting your puppy from preventable diseases is crucial. Work closely with your veterinarian to ensure your puppy receives all necessary vaccinations on schedule.</p>
-                    
-                    <p><strong>Typical vaccination timeline:</strong></p>
-                    <ul>
-                        <li>6-8 weeks: First DHPP vaccine (Distemper, Hepatitis, Parvovirus, Parainfluenza)</li>
-                        <li>10-12 weeks: Second DHPP vaccine</li>
-                        <li>14-16 weeks: Third DHPP vaccine and Rabies vaccine</li>
-                        <li>12-16 months: DHPP and Rabies booster</li>
-                        <li>Every 1-3 years: Adult boosters as recommended by your vet</li>
-                    </ul>
-
-                    <h3>Nutrition for Growing Puppies</h3>
-                    <p>Proper nutrition during the puppy stage sets the foundation for a lifetime of good health. Choose a high-quality puppy food formulated for your dog's expected adult size (small, medium, or large breed).</p>
-                    
-                    <p><strong>Feeding guidelines:</strong></p>
-                    <ul>
-                        <li>8-12 weeks: 4 meals per day</li>
-                        <li>3-6 months: 3 meals per day</li>
-                        <li>6-12 months: 2 meals per day</li>
-                        <li>Over 12 months: 1-2 meals per day</li>
-                    </ul>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Important Note</h4>
-                        <p>Avoid overfeeding! Excess weight during the growth period can lead to developmental problems, especially in large breed dogs. Follow feeding guidelines on your puppy food package and adjust based on your vet's recommendations.</p>
+                <!-- Guide 2: Senior Pet Care -->
+                <article class="article-card filter-item" data-category="health">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop" alt="Senior dog">
+                        <span class="article-category">Health</span>
                     </div>
-
-                    <h3>Creating a Puppy-Safe Home</h3>
-                    <p>Puppies are curious and will explore everything with their mouths. Puppy-proofing your home is essential for their safety.</p>
-                    
-                    <ul>
-                        <li>Remove or secure electrical cords</li>
-                        <li>Store cleaning products and medications in secure cabinets</li>
-                        <li>Remove toxic plants (lilies, azaleas, sago palms, etc.)</li>
-                        <li>Secure trash cans with locking lids</li>
-                        <li>Keep small objects that could be choking hazards out of reach</li>
-                        <li>Block off stairs until your puppy is coordinated enough to navigate them safely</li>
-                    </ul>
-
-                    <h3>The Importance of Play and Exercise</h3>
-                    <p>Play isn't just fun - it's essential for your puppy's physical and mental development. However, be careful not to over-exercise young puppies, as their bones and joints are still developing.</p>
-                    
-                    <p><strong>Exercise rule of thumb:</strong> 5 minutes of exercise per month of age, twice daily. So a 3-month-old puppy should get about 15 minutes of exercise twice a day.</p>
-
-                    <h3>Final Thoughts</h3>
-                    <p>Raising a puppy requires time, patience, and dedication, but the reward is an incredible bond with a loving companion. Remember, every puppy is unique - some learn faster than others, and that's perfectly okay. Celebrate small victories, maintain consistency, and don't hesitate to reach out to professional trainers or your veterinarian when you need guidance. Your puppy is learning how to be part of your family, and with your love and guidance, they'll grow into a wonderful adult dog.</p>
-                </div>
-            </article>
-
-            <!-- Article 2: Senior Pet Care -->
-            <article class="blog-article filter-item" data-category="health" id="senior-care">
-                <div class="article-header-section">
-                    <span class="article-category" style="display: inline-block; margin-bottom: 1rem;">Health</span>
-                    <h2 style="font-size: 2.5rem; color: var(--text-primary);">Senior Pet Care: Keeping Your Older Companion Comfortable</h2>
-                    <div class="article-meta-info">
-                        <span class="meta-item"><i class="far fa-clock"></i> 7 min read</span>
-                        <span class="meta-item"><i class="far fa-user"></i> Dr. James Cooper</span>
-                        <span class="meta-item"><i class="far fa-calendar"></i> Updated Nov 2025</span>
+                    <div class="article-content">
+                        <h3 class="article-title">Senior Pet Care: Golden Years Guide</h3>
+                        <p class="article-excerpt">Comprehensive care for aging pets to ensure their comfort and health in their golden years. Recognize signs of aging and provide the best care.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
+                            <a href="guides/senior-pet-care.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="article-content-section">
-                    <p>As our beloved pets enter their golden years, their needs change significantly. Senior pets require special attention, modified care routines, and lots of love. Understanding these changes and adapting accordingly can help ensure your aging companion enjoys their senior years with comfort and dignity.</p>
-
-                    <h3>When Is a Pet Considered "Senior"?</h3>
-                    <p>The age at which a pet is considered senior varies by species and size:</p>
-                    <ul>
-                        <li><strong>Small dogs (under 20 lbs):</strong> Around 10-12 years</li>
-                        <li><strong>Medium dogs (21-50 lbs):</strong> Around 8-10 years</li>
-                        <li><strong>Large dogs (51-90 lbs):</strong> Around 6-8 years</li>
-                        <li><strong>Giant dogs (over 90 lbs):</strong> Around 5-7 years</li>
-                        <li><strong>Cats:</strong> Around 10-12 years</li>
-                    </ul>
-
-                    <h3>Dietary Changes for Senior Pets</h3>
-                    <p>As pets age, their metabolism slows down, and their nutritional needs change. Many senior pets benefit from switching to specially formulated senior pet food.</p>
-
-                    <p><strong>Key nutritional considerations:</strong></p>
-                    <ul>
-                        <li><strong>Lower calories:</strong> Senior pets are less active and need fewer calories to maintain a healthy weight</li>
-                        <li><strong>Higher protein quality:</strong> Easily digestible proteins support muscle maintenance</li>
-                        <li><strong>Joint support:</strong> Glucosamine and chondroitin help maintain joint health</li>
-                        <li><strong>Omega-3 fatty acids:</strong> Support brain function and reduce inflammation</li>
-                        <li><strong>Antioxidants:</strong> Help combat cellular aging</li>
-                        <li><strong>Increased fiber:</strong> Aids digestion and prevents constipation</li>
-                    </ul>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-heart"></i> Gentle Reminder</h4>
-                        <p>Transition to senior food gradually over 7-10 days to avoid digestive upset. Mix increasing amounts of the new food with decreasing amounts of the old food.</p>
+                <!-- Guide 3: Cat Behavior -->
+                <article class="article-card filter-item" data-category="cats">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop" alt="Cat behavior">
+                        <span class="article-category">Cats</span>
                     </div>
-
-                    <h3>Modified Exercise Routines</h3>
-                    <p>Exercise remains important for senior pets, but the type and intensity should be adjusted to match their capabilities.</p>
-
-                    <p><strong>Exercise modifications:</strong></p>
-                    <ul>
-                        <li>Shorter, more frequent walks instead of long hikes</li>
-                        <li>Swimming or hydrotherapy for low-impact exercise</li>
-                        <li>Gentle play sessions that don't involve jumping or sharp turns</li>
-                        <li>Indoor activities on very hot or cold days</li>
-                        <li>Regular movement to prevent stiffness, even if it's just around the house</li>
-                    </ul>
-
-                    <h3>Health Monitoring and Veterinary Care</h3>
-                    <p>Senior pets should see the veterinarian more frequently - typically every 6 months instead of annually. Early detection of health issues can significantly improve treatment outcomes.</p>
-
-                    <p><strong>Watch for these common signs of aging:</strong></p>
-                    <ul>
-                        <li>Changes in appetite or water consumption</li>
-                        <li>Weight loss or gain</li>
-                        <li>Decreased energy or increased sleeping</li>
-                        <li>Difficulty standing up or climbing stairs</li>
-                        <li>Changes in bathroom habits</li>
-                        <li>Bad breath or dental issues</li>
-                        <li>Lumps or bumps on the skin</li>
-                        <li>Cloudiness in the eyes</li>
-                        <li>Behavioral changes or confusion</li>
-                    </ul>
-
-                    <h3>Making Your Home Senior-Pet Friendly</h3>
-                    <p>Simple modifications to your home can greatly improve your senior pet's quality of life.</p>
-
-                    <p><strong>Home adaptations:</strong></p>
-                    <ul>
-                        <li><strong>Ramps or steps:</strong> Help pets access furniture or cars without jumping</li>
-                        <li><strong>Non-slip mats:</strong> Provide traction on slippery floors</li>
-                        <li><strong>Orthopedic beds:</strong> Support achy joints and provide comfort</li>
-                        <li><strong>Raised food and water bowls:</strong> Reduce neck strain during meals</li>
-                        <li><strong>Night lights:</strong> Help pets with declining vision navigate at night</li>
-                        <li><strong>Easy access litter boxes:</strong> Lower sides for cats with arthritis</li>
-                        <li><strong>Indoor potty options:</strong> For dogs who can't hold it as long</li>
-                    </ul>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-paw"></i> Comfort First</h4>
-                        <p>Keep your senior pet's bed in a warm, draft-free area. Older pets often have difficulty regulating body temperature and appreciate extra warmth.</p>
+                    <div class="article-content">
+                        <h3 class="article-title">Cat Behavior Decoded: Understanding Your Feline</h3>
+                        <p class="article-excerpt">Master the art of reading body language and vocalizations to truly understand your cat. Learn what tail positions, ear movements, and meows really mean.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 9 min read</span>
+                            <a href="guides/cat-behavior-decoded.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
+                </article>
 
-                    <h3>Managing Arthritis and Joint Pain</h3>
-                    <p>Arthritis is one of the most common conditions affecting senior pets. While it can't be cured, it can be managed effectively.</p>
-
-                    <p><strong>Pain management strategies:</strong></p>
-                    <ul>
-                        <li>Prescription pain medications from your veterinarian</li>
-                        <li>Joint supplements (glucosamine, chondroitin, MSM)</li>
-                        <li>Regular, gentle exercise to maintain mobility</li>
-                        <li>Weight management to reduce joint stress</li>
-                        <li>Physical therapy or massage</li>
-                        <li>Warm compresses for sore joints</li>
-                        <li>Acupuncture (yes, for pets!)</li>
-                    </ul>
-
-                    <h3>Cognitive Health in Senior Pets</h3>
-                    <p>Just like humans, pets can experience cognitive decline as they age, often called Cognitive Dysfunction Syndrome (CDS). Signs include disorientation, changes in sleep patterns, decreased interaction, and house soiling.</p>
-
-                    <p><strong>Supporting cognitive health:</strong></p>
-                    <ul>
-                        <li>Maintain a consistent routine</li>
-                        <li>Provide mental stimulation with puzzle toys</li>
-                        <li>Continue socialization and interaction</li>
-                        <li>Consider supplements that support brain health</li>
-                        <li>Keep your pet's environment familiar and predictable</li>
-                    </ul>
-
-                    <h3>The Gift of Time</h3>
-                    <p>Caring for a senior pet is a privilege and an opportunity to give back to the companion who has given you so much love over the years. Yes, it requires extra attention and sometimes difficult decisions, but every moment spent ensuring their comfort is precious. Pay attention to their needs, celebrate the good days, and cherish the deep bond that only comes from years of companionship. Your senior pet may be slowing down, but their capacity to love remains as strong as ever.</p>
-                </div>
-            </article>
-
-            <!-- Article 3: Cat Behavior -->
-            <article class="blog-article filter-item" data-category="cats" id="cat-behavior">
-                <div class="article-header-section">
-                    <span class="article-category" style="display: inline-block; margin-bottom: 1rem;">Cats</span>
-                    <h2 style="font-size: 2.5rem; color: var(--text-primary);">Cat Behavior Decoded: Understanding Your Feline Friend</h2>
-                    <div class="article-meta-info">
-                        <span class="meta-item"><i class="far fa-clock"></i> 6 min read</span>
-                        <span class="meta-item"><i class="far fa-user"></i> Dr. Emily Foster</span>
-                        <span class="meta-item"><i class="far fa-calendar"></i> Updated Nov 2025</span>
+                <!-- Guide 4: Dog Nutrition -->
+                <article class="article-card filter-item" data-category="nutrition dogs">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&h=400&fit=crop" alt="Dog eating healthy food">
+                        <span class="article-category">Nutrition</span>
                     </div>
-                </div>
-
-                <div class="article-content-section">
-                    <p>Cats are mysterious, independent, and absolutely fascinating creatures. While they may seem aloof or unpredictable, cats actually communicate quite clearly - once you learn to read their signals. Understanding feline body language and behavior patterns can transform your relationship with your cat and help you meet their needs more effectively.</p>
-
-                    <h3>Decoding Feline Body Language</h3>
-                    <p>Cats are masters of subtle communication. Every part of their body - from ears to tail - tells a story about how they're feeling.</p>
-
-                    <p><strong>Tail positions and movements:</strong></p>
-                    <ul>
-                        <li><strong>Straight up with a slight curve:</strong> Happy, confident, and friendly</li>
-                        <li><strong>Puffed up:</strong> Frightened or aggressively aroused</li>
-                        <li><strong>Tucked between legs:</strong> Fearful or submissive</li>
-                        <li><strong>Slowly swishing:</strong> Focused or mildly irritated</li>
-                        <li><strong>Rapidly thumping:</strong> Agitated or about to pounce</li>
-                        <li><strong>Wrapped around body:</strong> Content and relaxed</li>
-                    </ul>
-
-                    <p><strong>Ear positions:</strong></p>
-                    <ul>
-                        <li><strong>Forward:</strong> Alert, interested, or happy</li>
-                        <li><strong>Sideways or back ("airplane ears"):</strong> Irritated, anxious, or overstimulated</li>
-                        <li><strong>Flat against head:</strong> Frightened, angry, or defensive</li>
-                        <li><strong>Rotating independently:</strong> Listening to multiple sounds</li>
-                    </ul>
-
-                    <p><strong>Eye signals:</strong></p>
-                    <ul>
-                        <li><strong>Slow blinks:</strong> "I love you" or "I trust you"</li>
-                        <li><strong>Dilated pupils:</strong> Excited, playful, frightened, or aggressive</li>
-                        <li><strong>Narrow pupils:</strong> Tense or potentially aggressive</li>
-                        <li><strong>Half-closed eyes:</strong> Relaxed and content</li>
-                    </ul>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-heart"></i> Try This!</h4>
-                        <p>Return your cat's slow blink! When your cat gives you a slow blink, blink back slowly. It's cat language for "I trust you" and strengthens your bond.</p>
+                    <div class="article-content">
+                        <h3 class="article-title">Complete Dog Nutrition: Feeding Your Best Friend</h3>
+                        <p class="article-excerpt">Everything about choosing the right food, portion sizes, treats, and dietary needs for different life stages. Make informed decisions about your dog's diet.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 11 min read</span>
+                            <a href="guides/dog-nutrition-guide.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
+                </article>
 
-                    <h3>Common Cat Behaviors Explained</h3>
-
-                    <p><strong>Kneading (Making Biscuits):</strong></p>
-                    <p>When cats push their paws alternately against a soft surface, they're displaying behavior from kittenhood when they kneaded their mother's belly to stimulate milk flow. Adult cats knead when they're content, comfortable, or showing affection. It's a huge compliment!</p>
-
-                    <p><strong>Head Bunting and Rubbing:</strong></p>
-                    <p>When your cat rubs their head or body against you, they're not just being affectionate - they're marking you with scent glands located on their face, paws, and flanks. This behavior says "You're mine!" and helps them feel secure in their territory.</p>
-
-                    <p><strong>The 3 AM Zoomies:</strong></p>
-                    <p>Cats are crepuscular, meaning they're naturally most active at dawn and dusk. Random bursts of energy (especially at night) are completely normal. Ensure your cat gets enough play and exercise during the day to minimize nighttime races.</p>
-
-                    <p><strong>Chattering at Birds:</strong></p>
-                    <p>That strange chittering sound cats make when watching birds through a window is fascinating! Theories suggest it's either frustration at not being able to catch prey, practice for the killing bite, or excitement at seeing potential prey.</p>
-
-                    <p><strong>Bringing You "Gifts":</strong></p>
-                    <p>When your cat brings you a dead mouse (or toy), they're not being morbid - they're showing love! In the wild, mother cats teach kittens to hunt by bringing them prey. Your cat might be trying to teach you, or simply sharing their "catch" with their family.</p>
-
-                    <h3>Environmental Enrichment</h3>
-                    <p>Cats need mental and physical stimulation to thrive. A bored cat can develop behavioral problems like excessive meowing, destructive behavior, or aggression.</p>
-
-                    <p><strong>Creating a cat-friendly environment:</strong></p>
-                    <ul>
-                        <li><strong>Vertical space:</strong> Cat trees, shelves, or window perches satisfy the climbing instinct</li>
-                        <li><strong>Scratching posts:</strong> Essential for nail maintenance and marking territory</li>
-                        <li><strong>Window views:</strong> Entertainment from watching the outside world</li>
-                        <li><strong>Hiding spots:</strong> Boxes, tunnels, or cat caves provide security</li>
-                        <li><strong>Puzzle feeders:</strong> Make mealtime mentally stimulating</li>
-                        <li><strong>Interactive toys:</strong> Wand toys, laser pointers (followed by a catchable toy)</li>
-                        <li><strong>Rotating toys:</strong> Keep things interesting by cycling through different toys</li>
-                    </ul>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-lightbulb"></i> Indoor Cat Tip</h4>
-                        <p>Create a "catio" or secure outdoor enclosure where your indoor cat can safely experience the outdoors. Even a window box with screening can provide exciting sensory stimulation!</p>
+                <!-- Guide 5: First-Time Cat Owner -->
+                <article class="article-card filter-item" data-category="cats">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10c1d3a1f0cc?w=600&h=400&fit=crop" alt="Kitten with new owner">
+                        <span class="article-category">Cats</span>
                     </div>
+                    <div class="article-content">
+                        <h3 class="article-title">First-Time Cat Owner's Complete Guide</h3>
+                        <p class="article-excerpt">Everything you need to know before bringing your first cat home. From litter boxes to scratching posts, set up the perfect cat-friendly home.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
+                            <a href="guides/first-time-cat-owner.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
 
-                    <h3>The Importance of Play</h3>
-                    <p>Play isn't just fun for cats - it's essential for their physical and mental health. Regular play sessions help prevent obesity, provide exercise, reduce stress, and satisfy hunting instincts.</p>
+                <!-- Guide 6: Pet Grooming -->
+                <article class="article-card filter-item" data-category="health">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1581579186913-45ac3e6efe93?w=600&h=400&fit=crop" alt="Pet grooming">
+                        <span class="article-category">Health</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Pet Grooming 101: At-Home Care Guide</h3>
+                        <p class="article-excerpt">Master the basics of brushing, bathing, nail trimming, and ear cleaning. Keep your pet looking and feeling great between professional grooming sessions.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                            <a href="guides/pet-grooming-guide.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
 
-                    <p><strong>Effective play tips:</strong></p>
-                    <ul>
-                        <li>Schedule at least two 15-minute play sessions daily</li>
-                        <li>Use toys that mimic prey (feathers, fake mice, balls)</li>
-                        <li>Let your cat "catch" the toy sometimes - it's rewarding!</li>
-                        <li>Vary play styles: chase, pounce, hunt</li>
-                        <li>End play sessions before your cat loses interest</li>
-                    </ul>
+                <!-- Additional Guide Cards (Placeholders for future content) -->
+                <article class="article-card filter-item" data-category="training">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=600&h=400&fit=crop" alt="Dog training">
+                        <span class="article-category">Training</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Advanced Dog Training Techniques</h3>
+                        <p class="article-excerpt">Take your dog's training to the next level with advanced commands and tricks. Build a stronger bond through positive reinforcement methods.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 12 min read</span>
+                            <a href="#" class="read-more">Coming Soon <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
 
-                    <h3>Understanding Cat Aggression</h3>
-                    <p>Aggression in cats usually has an underlying cause. Understanding why your cat is aggressive is key to addressing the behavior.</p>
+                <article class="article-card filter-item" data-category="nutrition">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&h=400&fit=crop" alt="Pet nutrition">
+                        <span class="article-category">Nutrition</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Complete Pet Nutrition Guide</h3>
+                        <p class="article-excerpt">Learn how to choose the right food for your pet's age, size, and health needs. Understand labels and create a balanced diet plan.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 11 min read</span>
+                            <a href="#" class="read-more">Coming Soon <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
 
-                    <p><strong>Common types of aggression:</strong></p>
-                    <ul>
-                        <li><strong>Play aggression:</strong> Overstimulated during play - redirect to appropriate toys</li>
-                        <li><strong>Petting aggression:</strong> Overstimulated by too much petting - watch for warning signs</li>
-                        <li><strong>Fear aggression:</strong> Feeling threatened - give space and identify triggers</li>
-                        <li><strong>Territorial aggression:</strong> Protecting resources or space - provide multiple resources</li>
-                        <li><strong>Redirected aggression:</strong> Can't reach the source of frustration - separate and calm down</li>
-                    </ul>
-
-                    <h3>Litter Box Behavior</h3>
-                    <p>Litter box issues are one of the most common behavioral problems. Most can be solved by understanding cats' natural preferences.</p>
-
-                    <p><strong>Litter box best practices:</strong></p>
-                    <ul>
-                        <li>One box per cat, plus one extra</li>
-                        <li>Large boxes - cats need room to turn around</li>
-                        <li>Unscented, clumping litter (most cats prefer this)</li>
-                        <li>Scooped daily, fully changed weekly</li>
-                        <li>Located in quiet, accessible areas</li>
-                        <li>Away from food and water</li>
-                        <li>Some cats prefer uncovered boxes</li>
-                    </ul>
-
-                    <h3>The Secret to a Happy Cat</h3>
-                    <p>Understanding cat behavior isn't about making them more like dogs - it's about appreciating them for who they are. Cats show love differently than other pets, but once you learn their language, you'll see just how deeply they care. Respect their independence, provide for their needs, engage in daily play, and give them space when they need it. A cat who feels understood and secure is a cat who will reward you with years of companionship, entertainment, and quiet moments of pure contentment. Your feline friend may be mysterious, but they're never unknowable - you just need to learn to speak cat!</p>
-                </div>
-            </article>
-
-            <!-- Continue with remaining articles... -->
-            <div style="text-align: center; padding: 3rem 0;">
-                <p style="color: var(--text-secondary); font-size: 1.1rem;">More guides coming soon! Check back regularly for new expert content.</p>
+                <article class="article-card filter-item" data-category="health">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d2?w=600&h=400&fit=crop" alt="Pet first aid">
+                        <span class="article-category">Health</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Emergency Pet First Aid Essentials</h3>
+                        <p class="article-excerpt">Be prepared for emergencies with this comprehensive first aid guide. Learn CPR, wound care, and when to rush to the vet.</p>
+                        <div class="article-meta">
+                            <span class="read-time"><i class="far fa-clock"></i> 15 min read</span>
+                            <a href="#" class="read-more">Coming Soon <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
             </div>
-
         </div>
     </section>
 
@@ -587,7 +240,7 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <i class="fas fa-paw"></i>
-                        <span>PetPals Haven</span>
+                        <span>Pawamor</span>
                     </div>
                     <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
                     <div class="social-links">
@@ -630,33 +283,72 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 PetPals Haven. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+                <p>&copy; 2025 Pawamor. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="../index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="blog.html" class="nav-item active">
+            <i class="fas fa-book"></i>
+            <span>Guides</span>
+        </a>
+        <a href="stories.html" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Stories</span>
+        </a>
+        <a href="about.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../scripts/theme.js"></script>
     <script src="../scripts/animations.js"></script>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/mobile-nav.js"></script>
+    <!-- <script src="../scripts/carousels.js"></script> Disabled - using vertical scroll -->
 
     <script>
         // Filter functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const filter = this.dataset.filter;
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const filterItems = document.querySelectorAll('.filter-item');
+        const searchInput = document.getElementById('searchInput');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
                 
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.style.background = 'var(--card-bg)';
+                    btn.style.color = 'var(--text-primary)';
+                    btn.style.borderColor = 'var(--border-color)';
+                });
+                button.classList.add('active');
+                button.style.background = 'var(--color-brand)';
+                button.style.color = 'white';
+                button.style.borderColor = 'var(--color-brand)';
                 
-                document.querySelectorAll('.filter-item').forEach(item => {
+                // Filter items
+                filterItems.forEach(item => {
                     if (filter === 'all' || item.dataset.category === filter) {
                         item.style.display = 'block';
+                        gsap.from(item, { opacity: 0, y: 20, duration: 0.5 });
                     } else {
                         item.style.display = 'none';
                     }
@@ -665,13 +357,46 @@
         });
 
         // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function(e) {
+        searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase();
-            document.querySelectorAll('.blog-article').forEach(article => {
-                const text = article.textContent.toLowerCase();
-                article.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            
+            filterItems.forEach(item => {
+                const title = item.querySelector('.article-title').textContent.toLowerCase();
+                const excerpt = item.querySelector('.article-excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
             });
         });
+
+        // Animate cards on load - ensure they're visible immediately
+        if (typeof gsap !== 'undefined') {
+            const articleCards = document.querySelectorAll('.article-card');
+            
+            // Set all cards to visible immediately
+            gsap.set(articleCards, { opacity: 1, y: 0 });
+            
+            // Then animate them in subtly
+            articleCards.forEach((card, index) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 90%',
+                        toggleActions: 'play none none none',
+                        once: true,
+                    },
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.4,
+                    delay: index * 0.05,
+                    ease: 'power2.out',
+                    clearProps: 'all'
+                });
+            });
+        }
     </script>
 </body>
 </html>

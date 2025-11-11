@@ -1,8 +1,8 @@
-# 🐾 PetPals Haven - Pet Lovers Community Website
+# 🐾 Pawamor - Pet Lovers Community Website
 
 A modern, responsive, and beautifully animated pet community platform built with HTML, CSS, and JavaScript. Features a complete dark/light theme system, GSAP animations, and comprehensive pet care resources.
 
-![PetPals Haven](https://img.shields.io/badge/Status-Production%20Ready-success)
+![Pawamor](https://img.shields.io/badge/Status-Production%20Ready-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## ✨ Features
@@ -273,6 +273,6 @@ If you find this project useful, please consider giving it a ⭐ on GitHub!
 
 ---
 
-**Built with ❤️ for pets and their humans by the PetPals Haven team**
+**Built with ❤️ for pets and their humans by the Pawamor team**
 
 _Remember: Every pet deserves love, and every pet parent deserves support!_ 🐾

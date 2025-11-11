@@ -69,63 +69,89 @@
 }
 
 /* Horizontal Scroll Carousels */
-.carousel-container {
+/* Only enabled on homepage for articles-grid and stories-grid */
+
+.carousel-wrapper {
     position: relative;
-    margin: 2rem 0;
 }
 
-.carousel-scroll {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 1rem;
-    padding: 1rem 0;
-}
-
-.carousel-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel-item {
-    flex: 0 0 85%;
-    scroll-snap-align: start;
-    transition: transform 0.3s ease;
-}
-
-@media (min-width: 640px) {
-    .carousel-item {
-        flex: 0 0 45%;
+@media (max-width: 768px) {
+    /* Homepage only: Enable horizontal scroll for featured sections */
+    body:not(.page-blog):not(.page-stories) .carousel-wrapper .articles-grid,
+    body:not(.page-blog):not(.page-stories) .carousel-wrapper .stories-grid {
+        display: flex !important;
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-snap-type: none;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+        scroll-behavior: auto;
+        scroll-padding: 0.5rem;
+        /* Smooth iOS scroll without snap */
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        /* Remove any scroll resistance */
+        will-change: scroll-position;
+    }
+    
+    body:not(.page-blog):not(.page-stories) .carousel-wrapper .articles-grid::-webkit-scrollbar,
+    body:not(.page-blog):not(.page-stories) .carousel-wrapper .stories-grid::-webkit-scrollbar {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+    
+    body:not(.page-blog):not(.page-stories) .carousel-wrapper .articles-grid .article-card,
+    body:not(.page-blog):not(.page-stories) .carousel-wrapper .stories-grid .story-card {
+        flex: 0 0 85%;
+        min-width: 280px;
+        max-width: 350px;
+        /* Remove snap completely for free scroll */
+        scroll-snap-align: none;
+    }
+    
+    /* Blog and Stories pages: Keep vertical layout */
+    .page-blog .articles-grid,
+    .page-stories .stories-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        overflow-x: visible !important;
+        gap: 1.5rem;
     }
 }
 
-@media (min-width: 968px) {
-    .carousel-item {
-        flex: 0 0 30%;
+/* Scroll Progress Bar - Single elegant indicator */
+@media (max-width: 768px) {
+    .scroll-progress-bar {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background: var(--border-color);
+        border-radius: 2px;
+        margin-top: 1.5rem;
+        overflow: hidden;
     }
-}
 
-/* Swipe Indicator */
-.swipe-indicator {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.swipe-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--border-color);
-    transition: all 0.3s ease;
-}
-
-.swipe-dot.active {
-    background: var(--color-brand);
-    width: 24px;
-    border-radius: 4px;
+    .scroll-progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--color-primary), var(--color-brand));
+        border-radius: 2px;
+        transition: width 0.1s ease-out;
+        width: 33.33%;
+    }
+    
+    /* Hide old dot indicators */
+    .swipe-indicator {
+        display: none !important;
+    }
+    
+    /* Hide on blog and stories pages */
+    .page-blog .scroll-progress-bar,
+    .page-stories .scroll-progress-bar {
+        display: none !important;
+    }
 }
 
 /* Mobile Card Styles */
