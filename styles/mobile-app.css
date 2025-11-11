@@ -249,7 +249,7 @@
 }
 
 /* Floating Action Button (FAB) */
-.fab {
+.floating-action-btn {
     position: fixed;
     bottom: 90px;
     right: 20px;
@@ -267,17 +267,17 @@
     z-index: 999;
 }
 
-.fab:hover {
+.floating-action-btn:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-.fab i {
+.floating-action-btn i {
     font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
-    .fab {
+    .floating-action-btn {
         display: flex;
     }
 }

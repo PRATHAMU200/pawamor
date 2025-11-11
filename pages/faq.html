@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Frequently Asked Questions - Pawamor</title>
+    <meta name="title" content="FAQ - Pawamor">
+    <meta name="description" content="Find answers to frequently asked questions about Pawamor, pet care, and how to use our community platform.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pawamor.in/pages/faq.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../images/logo_image.png">
+    <link rel="apple-touch-icon" href="../images/logo_image.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles/themes.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/mobile-app.css">
+    
+    <style>
+        .faq-hero {
+            background: linear-gradient(135deg, var(--color-brand), var(--color-primary));
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+        .faq-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .faq-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem 4rem;
+        }
+        .faq-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .category-btn {
+            padding: 1rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .category-btn:hover, .category-btn.active {
+            background: var(--color-brand);
+            color: white;
+            border-color: var(--color-brand);
+            transform: translateY(-3px);
+        }
+        .faq-section {
+            margin-bottom: 2rem;
+        }
+        .faq-section h2 {
+            color: var(--text-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-brand);
+        }
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            user-select: none;
+        }
+        .faq-question:hover {
+            background: var(--bg-secondary);
+        }
+        .faq-question i {
+            color: var(--color-brand);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        .search-box {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 1rem;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--color-brand);
+        }
+        .search-box i {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+        @media (max-width: 768px) {
+            .faq-hero h1 {
+                font-size: 2rem;
+            }
+            .faq-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <span>Pawamor</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="blog.html" class="nav-link">Guides</a></li>
+                    <li><a href="stories.html" class="nav-link">Stories</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="faq-hero">
+        <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>
+        <p>Find answers to common questions about Pawamor and pet care</p>
+    </section>
+
+    <!-- FAQ Content -->
+    <div class="faq-content">
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="faqSearch" placeholder="Search for questions...">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <!-- General Questions -->
+        <section class="faq-section">
+            <h2><i class="fas fa-info-circle"></i> About Pawamor</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is Pawamor?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Pawamor is a community platform dedicated to passionate pet lovers. We provide expert pet care guides, heartwarming pet stories, and a supportive community where pet parents can connect, share experiences, and learn from each other. Whether you have dogs, cats, birds, or other pets, Pawamor is your go-to resource for everything pet-related.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is Pawamor free to use?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Pawamor is completely free to use. You can browse all our guides, read community stories, and access resources without any subscription fees. We believe that quality pet care information should be accessible to everyone.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do I need to create an account?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can browse most of our content without an account. However, creating a free account allows you to save your favorite guides, share your own pet stories, participate in discussions, and receive personalized content recommendations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How can I contact Pawamor?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can reach us at support@pawamor.in or through our <a href="contact.html" style="color: var(--color-brand);">contact page</a>. We typically respond within 24-48 hours. You can also connect with us on social media: Facebook, Instagram, Twitter, and YouTube @pawamor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pet Care Questions -->
+        <section class="faq-section">
+            <h2><i class="fas fa-heart"></i> Pet Care</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are your pet care guides written by experts?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Our guides are researched and reviewed by veterinarians, certified pet trainers, and experienced pet care professionals. We ensure all information is accurate, up-to-date, and follows best practices in pet care.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I rely on Pawamor for medical advice?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>While we provide educational information about pet health, Pawamor is not a substitute for professional veterinary care. Always consult with your veterinarian for medical advice, diagnosis, or treatment of your pet's health concerns. In case of emergencies, contact your local vet immediately.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What types of pets does Pawamor cover?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We cover a wide range of pets including dogs, cats, birds (parrots, cockatiels, budgies), small mammals (rabbits, hamsters, guinea pigs), reptiles, and fish. Our content library is constantly growing to serve all pet parents.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How often do you update your guides?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We regularly update our guides to reflect the latest research and best practices in pet care. Major guides are reviewed at least twice a year, and we add new content weekly. If you notice outdated information, please let us know!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Questions -->
+        <section class="faq-section">
+            <h2><i class="fas fa-users"></i> Community & Sharing</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I share my own pet story?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! We love hearing pet stories from our community. You can submit your story through our contact form or by emailing support@pawamor.in. Include photos if you'd like them featured. We review all submissions and publish the best stories on our platform.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How can I share guides on social media?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Each guide has social sharing buttons at the top of the page. Click on the Facebook, Twitter, WhatsApp, or LinkedIn icon to share directly. You can also copy the page URL and share it anywhere you like!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I contribute as a writer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We welcome contributions from pet care professionals, veterinarians, trainers, and experienced pet parents. If you'd like to write for Pawamor, please email us at support@pawamor.in with your credentials and writing samples.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Questions -->
+        <section class="faq-section">
+            <h2><i class="fas fa-laptop"></i> Technical Support</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>The website isn't loading properly. What should I do?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Try these steps: 1) Clear your browser cache and cookies, 2) Try a different browser, 3) Check your internet connection, 4) Disable browser extensions temporarily. If the problem persists, contact us at support@pawamor.in with details about your browser and device.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is Pawamor mobile-friendly?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Pawamor is fully responsive and optimized for mobile devices. You can access all features on smartphones and tablets with a smooth, app-like experience.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you have a mobile app?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Currently, we don't have a dedicated mobile app, but our website is optimized for mobile browsing. We're working on a mobile app and will announce it when it's ready!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I change the dark/light theme?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Look for the sun/moon icon in the top navigation bar. Click it to toggle between light and dark themes. Your preference will be saved for future visits.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy & Safety -->
+        <section class="faq-section">
+            <h2><i class="fas fa-shield-alt"></i> Privacy & Safety</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How is my personal data protected?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We take data privacy seriously. We use industry-standard encryption and security measures to protect your information. Read our <a href="privacy-policy.html" style="color: var(--color-brand);">Privacy Policy</a> for detailed information about how we collect, use, and protect your data.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you sell my data to third parties?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>No, we never sell your personal data to third parties. We may share anonymized, aggregated data for analytics purposes, but your personal information remains private and secure.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I delete my account?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you have the right to delete your account at any time. Contact us at support@pawamor.in and we'll process your request within 48 hours. Note that some information may be retained for legal or administrative purposes as outlined in our Privacy Policy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Still Have Questions -->
+        <div style="background: var(--bg-secondary); padding: 3rem; border-radius: 20px; text-align: center; margin-top: 3rem;">
+            <h2 style="color: var(--text-primary); margin-bottom: 1rem;">Still Have Questions?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Can't find what you're looking for? We're here to help!</p>
+            <a href="contact.html" class="cta-button" style="display: inline-block; padding: 1rem 2rem; background: var(--color-brand); color: white; border-radius: 50px; text-decoration: none; font-weight: 600;">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-paw"></i>
+                        <span>Pawamor</span>
+                    </div>
+                    <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/pawamor" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/pawamor" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/pawamor" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com/@pawamor" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">
+                        <i class="fas fa-envelope"></i> support@pawamor.in
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Guides</a></li>
+                        <li><a href="stories.html">Community Stories</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pet Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html?filter=dogs">Dogs</a></li>
+                        <li><a href="blog.html?filter=cats">Cats</a></li>
+                        <li><a href="blog.html?filter=birds">Birds</a></li>
+                        <li><a href="blog.html?filter=small-pets">Small Pets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pawamor. Made with <i class="fas fa-heart"></i> for pets and their humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/navigation.js"></script>
+    
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const wasActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Open clicked item if it wasn't active
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('faqSearch');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

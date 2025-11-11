@@ -615,11 +615,12 @@ ul {
 .social-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-links a {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -628,11 +629,24 @@ ul {
     border-radius: 50%;
     font-size: 1.2rem;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .social-links a:hover {
     transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 0.75rem;
+        justify-content: center;
+    }
+    .social-links a {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
 }
 
 .footer-section h3 {

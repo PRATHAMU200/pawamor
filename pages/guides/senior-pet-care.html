@@ -3,7 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Pet Care: Golden Years Guide - Pawamor</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Senior Pet Care: Complete Golden Years Guide for Dogs & Cats | Pawamor</title>
+    <meta name="title" content="Senior Pet Care: Complete Golden Years Guide for Dogs & Cats | Pawamor">
+    <meta name="description" content="Expert guide to caring for senior pets. Learn about age-related changes, health monitoring, nutrition, mobility support, and making your aging pet's golden years comfortable and happy.">
+    <meta name="keywords" content="senior pet care, old dog care, aging cat care, elderly pet health, senior dog nutrition, senior pet mobility, geriatric pet care, aging pet symptoms">
+    <meta name="author" content="Pawamor">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pawamor.in/pages/guides/senior-pet-care.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo_image.png">
+    <link rel="apple-touch-icon" href="../../images/logo_image.png">
+    <link rel="manifest" href="../../site.webmanifest">
+    <meta name="theme-color" content="#FF6B6B">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pawamor.in/pages/guides/senior-pet-care.html">
+    <meta property="og:title" content="Senior Pet Care: Complete Golden Years Guide for Dogs & Cats">
+    <meta property="og:description" content="Complete guide to caring for senior pets covering health monitoring, nutrition, mobility support, and ensuring comfort in their golden years.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&h=630&fit=crop">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pawamor.in/pages/guides/senior-pet-care.html">
+    <meta property="twitter:title" content="Senior Pet Care: Complete Golden Years Guide for Dogs & Cats">
+    <meta property="twitter:description" content="Complete guide to caring for senior pets covering health monitoring, nutrition, mobility support, and ensuring comfort in their golden years.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&h=630&fit=crop">
+    
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../styles/themes.css">
@@ -16,8 +45,8 @@
         .guide-hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
         .guide-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
         .guide-meta-item { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px); }
-        .guide-content { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
-        .guide-sidebar { position: sticky; top: 100px; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); }
+        .guide-content { max-width: 900px; margin: 0 auto; padding: 3rem 0.5rem; }
+        .guide-sidebar { position: sticky; top: 0px; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); max-height: fit-content;}
         .guide-layout { display: grid; grid-template-columns: 250px 1fr; gap: 3rem; max-width: 1400px; margin: 0 auto; padding: 3rem 1.5rem; }
         .toc-list { list-style: none; }
         .toc-list li { margin-bottom: 0.8rem; }
@@ -37,22 +66,121 @@
         .checklist-item input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; }
         .author-box { background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); display: flex; gap: 1.5rem; align-items: center; margin: 3rem 0; }
         .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--color-brand); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; flex-shrink: 0; }
-        .social-share { display: flex; gap: 1rem; margin: 2rem 0; }
-        .share-btn { padding: 0.8rem 1.5rem; border-radius: 50px; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; transition: all 0.3s ease; }
+        .social-share { display: flex; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .share-btn { width: 45px; height: 45px; border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: all 0.3s ease; flex-shrink: 0; }
         .share-btn.facebook { background: #1877f2; color: white; }
         .share-btn.twitter { background: #1da1f2; color: white; }
-        .share-btn.pinterest { background: #e60023; color: white; }
-        .share-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .share-btn.whatsapp { background: #25D366; color: white; }
+        .share-btn.linkedin { background: #0077b5; color: white; }
+        .share-btn:hover { transform: translateY(-3px) scale(1.1); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
         .related-guides { margin-top: 4rem; }
         .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
         .age-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
         .age-card { background: var(--card-bg); padding: 1.5rem; border-radius: 15px; text-align: center; }
         .age-number { font-size: 3rem; font-weight: 800; color: var(--color-brand); margin-bottom: 0.5rem; }
+        
         @media (max-width: 968px) {
-            .guide-layout { grid-template-columns: 1fr; }
-            .guide-sidebar { position: relative; top: 0; }
-            .guide-hero h1 { font-size: 2rem; }
-            .age-comparison { grid-template-columns: 1fr; }
+            .guide-hero { 
+                height: auto; 
+                min-height: 300px; 
+                padding: 2rem 1rem;
+                margin-top: 60px;
+            }
+            .guide-hero-content { 
+                padding: 1rem; 
+            }
+            .guide-hero h1 { 
+                font-size: 1.8rem; 
+                line-height: 1.3;
+                margin-bottom: 0.8rem;
+            }
+            .guide-hero p {
+                font-size: 1rem !important;
+                margin-bottom: 1rem;
+            }
+            .guide-meta { 
+                gap: 0.8rem; 
+                font-size: 0.85rem;
+            }
+            .guide-meta-item {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+            .guide-layout { 
+                grid-template-columns: 1fr; 
+                padding: 1.5rem 1rem;
+                gap: 0;
+            }
+            .guide-sidebar { 
+                position: relative; 
+                top: 0; 
+                padding: 1.5rem 1rem; 
+                background: transparent; 
+                box-shadow: none;
+                margin-bottom: 1rem;
+            }
+            .age-comparison { 
+                grid-template-columns: 1fr; 
+                gap: 1.2rem;
+            }
+            /* Hide table of contents on mobile */
+            .guide-sidebar > h3,
+            .guide-sidebar > .toc-list { 
+                display: none; 
+            }
+            .social-share { 
+                justify-content: center; 
+                margin: 1rem 0; 
+                gap: 0.8rem;
+            }
+            .share-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+            .guide-section {
+                margin-bottom: 2.5rem;
+            }
+            .guide-section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1.2rem;
+            }
+            .guide-section h3 {
+                font-size: 1.3rem;
+                margin: 1.5rem 0 1rem;
+            }
+            .guide-section p {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 1.2rem;
+            }
+            .guide-section ul, 
+            .guide-section ol {
+                margin-left: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+            .guide-section li {
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-bottom: 0.7rem;
+            }
+            .tip-box {
+                padding: 1.2rem;
+                margin: 1.5rem 0;
+            }
+            .checklist {
+                padding: 1.2rem;
+                margin: 1.2rem 0;
+            }
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+            .related-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -114,12 +242,21 @@
                 <li><a href="#comfort">Comfort Adjustments</a></li>
             </ul>
             
-            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-                <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Share this guide</h4>
-                <div class="social-share" style="flex-direction: column;">
-                    <button class="share-btn facebook"><i class="fab fa-facebook"></i> Share</button>
-                    <button class="share-btn twitter"><i class="fab fa-twitter"></i> Tweet</button>
-                    <button class="share-btn pinterest"><i class="fab fa-pinterest"></i> Pin</button>
+            <div style="padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                <h4 style="color: var(--text-primary); margin-bottom: 1rem; text-align: center;">Share this guide</h4>
+                <div class="social-share">
+                    <button class="share-btn facebook" onclick="shareOn('facebook')" aria-label="Share on Facebook" title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button class="share-btn twitter" onclick="shareOn('twitter')" aria-label="Share on Twitter" title="Share on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="share-btn whatsapp" onclick="shareOn('whatsapp')" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <button class="share-btn linkedin" onclick="shareOn('linkedin')" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </button>
                 </div>
             </div>
         </aside>
@@ -447,11 +584,14 @@
                     <div class="footer-logo"><i class="fas fa-paw"></i><span>Pawamor</span></div>
                     <p class="footer-description">A loving community where pet owners connect, share, and learn together.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://facebook.com/pawamor" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/pawamor" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/pawamor" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com/@pawamor" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">
+                        <i class="fas fa-envelope"></i> support@pawamor.in
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -474,8 +614,9 @@
                     <h3>Support</h3>
                     <ul class="footer-links">
                         <li><a href="../contact.html">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
                     </ul>
                 </div>
             </div>
@@ -548,18 +689,39 @@
             });
         });
 
-        // Share buttons
+        // Share function
+        function shareOn(platform) {
+            const text = encodeURIComponent('Check out this senior pet care guide from Pawamor!');
+            const url = encodeURIComponent(window.location.href);
+            
+            const shareUrls = {
+                facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+                twitter: `https://twitter.com/intent/tweet?text=${text}&url=${url}&via=pawamor`,
+                whatsapp: `https://wa.me/?text=${text}%20${url}`,
+                linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`
+            };
+            
+            if (shareUrls[platform]) {
+                window.open(shareUrls[platform], '_blank', 'width=600,height=400');
+            }
+        }
+
+        // Share buttons (legacy support)
         document.querySelectorAll('.share-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function(e) {
+                if (this.onclick) return; // Skip if onclick is already set
+                
                 const text = 'Check out this senior pet care guide from Pawamor!';
                 const url = window.location.href;
                 
                 if (this.classList.contains('facebook')) {
                     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
                 } else if (this.classList.contains('twitter')) {
-                    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
-                } else if (this.classList.contains('pinterest')) {
-                    window.open(`https://pinterest.com/pin/create/button/?url=${url}&description=${text}`, '_blank');
+                    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}&via=pawamor`, '_blank');
+                } else if (this.classList.contains('whatsapp')) {
+                    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+                } else if (this.classList.contains('linkedin')) {
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
                 }
             });
         });

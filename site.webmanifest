@@ -1,0 +1,21 @@
+{
+    "name": "Pawamor - Pet Care Community",
+    "short_name": "Pawamor",
+    "description": "Your trusted community for pet care guides, stories, and expert advice for dogs, cats, birds, and more.",
+    "icons": [
+        {
+            "src": "/images/logo_image.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/logo_image.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FF6B6B",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/"
+}
