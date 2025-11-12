@@ -61,14 +61,91 @@
     <!-- Guide Detail Pages -->
     <url>
         <loc>https://pawamor.in/pages/guides/puppy-training-guide.html</loc>
-        <lastmod>2025-11-11</lastmod>
+        <lastmod>2025-11-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://pawamor.in/pages/guides/cat-nutrition-guide.html</loc>
-        <lastmod>2025-11-11</lastmod>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/dog-training-basics.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/dog-nutrition-guide.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/cat-behavior-decoded.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/cat-health-warning-signs.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/first-time-dog-owner.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/first-time-cat-owner.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/pet-body-language.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/pet-emergency-first-aid.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/pet-grooming-guide.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/puppy-101-guide.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/guides/senior-pet-care.html</loc>
+        <lastmod>2025-11-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -76,14 +153,56 @@
     <!-- Story Detail Pages -->
     <url>
         <loc>https://pawamor.in/pages/stories/sarah-max-rescue.html</loc>
-        <lastmod>2025-11-11</lastmod>
+        <lastmod>2025-11-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://pawamor.in/pages/stories/emily-kiwi-cockatiel.html</loc>
-        <lastmod>2025-11-11</lastmod>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/stories/michael-luna-adoption.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/stories/david-cooper-healing.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/stories/priya-rocky-rescue.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/stories/anjali-whiskers-grief.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/stories/rahul-milo-adventure.html</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pawamor.in/pages/stories/sneha-simba-training.html</loc>
+        <lastmod>2025-11-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
